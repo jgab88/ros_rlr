@@ -1,0 +1,21 @@
+[0.566s] Invoking command in '/home/jg/ros_rlr/src/cube_localizer': PYTHONPATH=/home/jg/ros_rlr/build/cube_localizer/prefix_override:/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/jg/ros_rlr/build/cube_localizer/build install --record /home/jg/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
+[0.753s] running egg_info
+[0.753s] writing ../../build/cube_localizer/cube_localizer.egg-info/PKG-INFO
+[0.754s] writing dependency_links to ../../build/cube_localizer/cube_localizer.egg-info/dependency_links.txt
+[0.754s] writing entry points to ../../build/cube_localizer/cube_localizer.egg-info/entry_points.txt
+[0.754s] writing requirements to ../../build/cube_localizer/cube_localizer.egg-info/requires.txt
+[0.754s] writing top-level names to ../../build/cube_localizer/cube_localizer.egg-info/top_level.txt
+[0.755s] reading manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.756s] writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.757s] running build
+[0.757s] running build_py
+[0.757s] running install
+[0.757s] running install_lib
+[0.758s] running install_data
+[0.758s] running install_egg_info
+[0.759s] removing '/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info' (and everything under it)
+[0.760s] Copying ../../build/cube_localizer/cube_localizer.egg-info to /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info
+[0.760s] running install_scripts
+[0.779s] Installing cube_localizer script to /home/jg/ros_rlr/install/cube_localizer/lib/cube_localizer
+[0.779s] writing list of installed files to '/home/jg/ros_rlr/build/cube_localizer/install.log'
+[0.803s] Invoked command in '/home/jg/ros_rlr/src/cube_localizer' returned '0': PYTHONPATH=/home/jg/ros_rlr/build/cube_localizer/prefix_override:/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/jg/ros_rlr/build/cube_localizer/build install --record /home/jg/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data

@@ -1,0 +1,6 @@
+Invoking command in '/home/jg/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jg/ros_rlr/src/rplidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/jg/ros_rlr/install/rplidar_ros
+Invoked command in '/home/jg/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jg/ros_rlr/src/rplidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/jg/ros_rlr/install/rplidar_ros
+Invoking command in '/home/jg/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jg/ros_rlr/build/rplidar_ros -- -j8 -l8
+Invoked command in '/home/jg/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jg/ros_rlr/build/rplidar_ros -- -j8 -l8
+Invoking command in '/home/jg/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jg/ros_rlr/build/rplidar_ros
+Invoked command in '/home/jg/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jg/ros_rlr/build/rplidar_ros
