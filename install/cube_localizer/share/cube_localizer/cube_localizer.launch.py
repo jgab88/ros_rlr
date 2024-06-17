@@ -17,5 +17,18 @@ def generate_launch_description():
             executable='rviz2',
             name='rviz2',
             arguments=['-d', rviz_config]
+        ),
+
+        Node(
+            package='rplidar_ros',
+            executable='rplidar_composition',
+            name='rplidar_scan_publisher_node',
+            parameters=[
+                {'serial_port': '/dev/ttyUSB0'},
+                {'serial_baudrate': 115200},
+                {'frame_id': 'laser_frame'},
+                {'inverted': False},
+                {'angle_compensate': True}
+            ]
         )
     ])

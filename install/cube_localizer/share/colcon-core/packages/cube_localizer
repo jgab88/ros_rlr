@@ -1,1 +1,1 @@
-geometry_msgs:rclpy:sensor_msgs:visualization_msgs
+geometry_msgs:rclpy:rplidar_ros:sensor_msgs:visualization_msgs

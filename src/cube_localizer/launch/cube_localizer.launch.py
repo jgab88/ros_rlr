@@ -20,8 +20,8 @@ def generate_launch_description():
         ),
 
         Node(
-            package='rplidar_ros2',
-            executable='rplidar_scan_publisher',
+            package='rplidar_ros',
+            executable='rplidar_composition',
             name='rplidar_scan_publisher_node',
             parameters=[
                 {'serial_port': '/dev/ttyUSB0'},
@@ -30,5 +30,12 @@ def generate_launch_description():
                 {'inverted': False},
                 {'angle_compensate': True}
             ]
-        )
+        ),
+        
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='static_transform_publisher',
+            arguments=['0', '0', '0', '0', '0', '0', 'map', 'laser_frame']
+        )   
     ])

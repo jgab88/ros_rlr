@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/cube_localizer/cube_localizer.egg-info
+writing ../../build/cube_localizer/cube_localizer.egg-info/PKG-INFO
+writing dependency_links to ../../build/cube_localizer/cube_localizer.egg-info/dependency_links.txt
+writing entry points to ../../build/cube_localizer/cube_localizer.egg-info/entry_points.txt
+writing requirements to ../../build/cube_localizer/cube_localizer.egg-info/requires.txt
+writing top-level names to ../../build/cube_localizer/cube_localizer.egg-info/top_level.txt
+writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+reading manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jg/ros_rlr/build/cube_localizer/build
+creating /home/jg/ros_rlr/build/cube_localizer/build/lib
+creating /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+copying cube_localizer/cube_localizer.py -> /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+copying cube_localizer/__init__.py -> /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+running install
+running install_lib
+creating /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+copying /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer/cube_localizer.py -> /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+copying /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer/__init__.py -> /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+byte-compiling /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/cube_localizer.py to cube_localizer.cpython-310.pyc
+byte-compiling /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/jg/ros_rlr/install/cube_localizer/share/ament_index
+creating /home/jg/ros_rlr/install/cube_localizer/share/ament_index/resource_index
+creating /home/jg/ros_rlr/install/cube_localizer/share/ament_index/resource_index/packages
+copying resource/cube_localizer -> /home/jg/ros_rlr/install/cube_localizer/share/ament_index/resource_index/packages
+copying package.xml -> /home/jg/ros_rlr/install/cube_localizer/share/cube_localizer
+copying launch/cube_localizer.launch.py -> /home/jg/ros_rlr/install/cube_localizer/share/cube_localizer
+copying config.rviz -> /home/jg/ros_rlr/install/cube_localizer/share/cube_localizer
+running install_egg_info
+Copying ../../build/cube_localizer/cube_localizer.egg-info to /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info
+running install_scripts
+Installing cube_localizer script to /home/jg/ros_rlr/install/cube_localizer/lib/cube_localizer
+writing list of installed files to '/home/jg/ros_rlr/build/cube_localizer/install.log'

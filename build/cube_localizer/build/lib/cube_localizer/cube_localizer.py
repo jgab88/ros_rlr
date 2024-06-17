@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Imu
+from sensor_msgs.msg import Imu, LaserScan
 from geometry_msgs.msg import PoseStamped
 from visualization_msgs.msg import Marker
 import math
@@ -16,6 +16,7 @@ class CubeLocalizer(Node):
         )
 
         self.imu_sub = self.create_subscription(Imu, 'imu/data', self.imu_callback, qos_profile)
+        self.lidar_sub = self.create_subscription(LaserScan, '/scan', self.lidar_callback, 100)
         self.pose_pub = self.create_publisher(PoseStamped, 'cube_pose', 10)
         self.marker_pub = self.create_publisher(Marker, 'cube_marker', 10)
         self.x = 0.0
@@ -79,6 +80,22 @@ class CubeLocalizer(Node):
         marker.color.a = 1.0
         marker.pose.orientation = orientation
         self.marker_pub.publish(marker)
+
+    def lidar_callback(self, msg):
+        # Process the LIDAR scan data
+        ranges = msg.ranges
+        angle_min = msg.angle_min
+        angle_max = msg.angle_max
+        angle_increment = msg.angle_increment
+
+        # Perform obstacle detection or other desired functionalities
+        # using the LIDAR scan data
+        # ...
+
+        # Example: Print the minimum and maximum range values
+        min_range = min(ranges)
+        max_range = max(ranges)
+        self.get_logger().info(f"Minimum range: {min_range}, Maximum range: {max_range}")
 
     def euler_from_quaternion(self, quaternion):
         x = quaternion.x

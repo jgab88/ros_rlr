@@ -1,5 +1,0 @@
-  File "/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/cube_localizer.py", line 6
-    from tf2_ros import *tf*transformations
-                         ^^
-SyntaxError: invalid syntax
-

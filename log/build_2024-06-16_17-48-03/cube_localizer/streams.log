@@ -1,0 +1,39 @@
+[0.407s] Invoking command in '/home/jg/ros_rlr/src/cube_localizer': AMENT_PREFIX_PATH=/home/jg/ros_rlr/install/rplidar_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jg/ros_rlr/install/rplidar_ros:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/jg/ros_rlr/install/rplidar_ros/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jg/ros_rlr/build/cube_localizer/prefix_override:/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/jg/ros_rlr/build/cube_localizer/build install --record /home/jg/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
+[0.559s] running egg_info
+[0.559s] creating ../../build/cube_localizer/cube_localizer.egg-info
+[0.559s] writing ../../build/cube_localizer/cube_localizer.egg-info/PKG-INFO
+[0.559s] writing dependency_links to ../../build/cube_localizer/cube_localizer.egg-info/dependency_links.txt
+[0.559s] writing entry points to ../../build/cube_localizer/cube_localizer.egg-info/entry_points.txt
+[0.559s] writing requirements to ../../build/cube_localizer/cube_localizer.egg-info/requires.txt
+[0.559s] writing top-level names to ../../build/cube_localizer/cube_localizer.egg-info/top_level.txt
+[0.560s] writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.561s] reading manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.561s] writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.561s] running build
+[0.561s] running build_py
+[0.561s] creating /home/jg/ros_rlr/build/cube_localizer/build
+[0.561s] creating /home/jg/ros_rlr/build/cube_localizer/build/lib
+[0.561s] creating /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+[0.561s] copying cube_localizer/cube_localizer.py -> /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+[0.561s] copying cube_localizer/__init__.py -> /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+[0.562s] running install
+[0.562s] running install_lib
+[0.562s] creating /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+[0.562s] copying /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer/cube_localizer.py -> /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+[0.562s] copying /home/jg/ros_rlr/build/cube_localizer/build/lib/cube_localizer/__init__.py -> /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+[0.563s] byte-compiling /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/cube_localizer.py to cube_localizer.cpython-310.pyc
+[0.564s] byte-compiling /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/__init__.py to __init__.cpython-310.pyc
+[0.564s] running install_data
+[0.564s] creating /home/jg/ros_rlr/install/cube_localizer/share/ament_index
+[0.564s] creating /home/jg/ros_rlr/install/cube_localizer/share/ament_index/resource_index
+[0.564s] creating /home/jg/ros_rlr/install/cube_localizer/share/ament_index/resource_index/packages
+[0.564s] copying resource/cube_localizer -> /home/jg/ros_rlr/install/cube_localizer/share/ament_index/resource_index/packages
+[0.564s] copying package.xml -> /home/jg/ros_rlr/install/cube_localizer/share/cube_localizer
+[0.564s] copying launch/cube_localizer.launch.py -> /home/jg/ros_rlr/install/cube_localizer/share/cube_localizer
+[0.564s] copying config.rviz -> /home/jg/ros_rlr/install/cube_localizer/share/cube_localizer
+[0.564s] running install_egg_info
+[0.565s] Copying ../../build/cube_localizer/cube_localizer.egg-info to /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info
+[0.566s] running install_scripts
+[0.581s] Installing cube_localizer script to /home/jg/ros_rlr/install/cube_localizer/lib/cube_localizer
+[0.581s] writing list of installed files to '/home/jg/ros_rlr/build/cube_localizer/install.log'
+[0.601s] Invoked command in '/home/jg/ros_rlr/src/cube_localizer' returned '0': AMENT_PREFIX_PATH=/home/jg/ros_rlr/install/rplidar_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jg/ros_rlr/install/rplidar_ros:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/jg/ros_rlr/install/rplidar_ros/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jg/ros_rlr/build/cube_localizer/prefix_override:/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/jg/ros_rlr/build/cube_localizer/build install --record /home/jg/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
