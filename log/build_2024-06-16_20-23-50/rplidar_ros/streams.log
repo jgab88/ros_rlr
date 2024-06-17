@@ -1,0 +1,43 @@
+[0.008s] Invoking command in '/home/jg/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jg/ros_rlr/build/rplidar_ros -- -j8 -l8
+[0.053s] [ 77%] Built target rplidar_composition_node
+[0.086s] [100%] Built target rplidar_composition
+[0.100s] Invoked command in '/home/jg/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jg/ros_rlr/build/rplidar_ros -- -j8 -l8
+[0.137s] Invoking command in '/home/jg/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jg/ros_rlr/build/rplidar_ros
+[0.141s] -- Install configuration: ""
+[0.141s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[0.141s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch
+[0.141s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+[0.141s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/rviz
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/lib/librplidar_composition_node.so
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/include
+[0.142s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/include/visibility.h
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/include/rplidar_node.hpp
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[0.143s] -- Installing: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/package.dsv
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[0.143s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+[0.144s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.144s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.144s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[0.144s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[0.144s] -- Up-to-date: /home/jg/ros_rlr/install/rplidar_ros/share/rplidar_ros/package.xml
+[0.145s] Invoked command in '/home/jg/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jg/ros_rlr/build/rplidar_ros

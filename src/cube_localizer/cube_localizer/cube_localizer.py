@@ -1,9 +1,10 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Imu, LaserScan
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, TransformStamped
 from visualization_msgs.msg import Marker
 import math
+import tf2_ros
 
 class CubeLocalizer(Node):
     def __init__(self):
@@ -12,13 +13,15 @@ class CubeLocalizer(Node):
         qos_profile = rclpy.qos.QoSProfile(
             reliability=rclpy.qos.ReliabilityPolicy.BEST_EFFORT,
             history=rclpy.qos.HistoryPolicy.KEEP_LAST,
-            depth=10
+            depth=100  # Increased depth for the subscription queue
         )
 
         self.imu_sub = self.create_subscription(Imu, 'imu/data', self.imu_callback, qos_profile)
-        self.lidar_sub = self.create_subscription(LaserScan, '/scan', self.lidar_callback, 100)
+        self.lidar_sub = self.create_subscription(LaserScan, '/scan', self.lidar_callback, qos_profile)
         self.pose_pub = self.create_publisher(PoseStamped, 'cube_pose', 10)
         self.marker_pub = self.create_publisher(Marker, 'cube_marker', 10)
+        self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
+
         self.x = 0.0
         self.y = 0.0
         self.z = 0.0
@@ -80,6 +83,17 @@ class CubeLocalizer(Node):
         marker.color.a = 1.0
         marker.pose.orientation = orientation
         self.marker_pub.publish(marker)
+
+        # Publish dynamic transform from 'map' to 'laser_frame'
+        transform = TransformStamped()
+        transform.header.stamp = current_time.to_msg()
+        transform.header.frame_id = 'map'
+        transform.child_frame_id = 'laser_frame'
+        transform.transform.translation.x = self.x
+        transform.transform.translation.y = self.y
+        transform.transform.translation.z = self.z
+        transform.transform.rotation = orientation
+        self.tf_broadcaster.sendTransform(transform)
 
     def lidar_callback(self, msg):
         # Process the LIDAR scan data
