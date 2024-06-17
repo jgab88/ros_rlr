@@ -3,6 +3,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Imu, LaserScan
 from geometry_msgs.msg import PoseStamped, TransformStamped
 from visualization_msgs.msg import Marker
+from std_srvs.srv import Empty  # Import the standard Empty service
 import math
 import tf2_ros
 
@@ -21,6 +22,8 @@ class CubeLocalizer(Node):
         self.pose_pub = self.create_publisher(PoseStamped, 'cube_pose', 10)
         self.marker_pub = self.create_publisher(Marker, 'cube_marker', 10)
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
+
+        self.reset_service = self.create_service(Empty, 'reset_cube', self.reset_callback)  # Add reset service
 
         self.x = 0.0
         self.y = 0.0
@@ -129,6 +132,17 @@ class CubeLocalizer(Node):
         yaw = math.atan2(siny_cosp, cosy_cosp)
 
         return roll, pitch, yaw
+
+    def reset_callback(self, request, response):
+        self.x = 0.0
+        self.y = 0.0
+        self.z = 0.0
+        self.speed = 0.0
+        self.height = 0.0
+        self.heading = 0.0
+        self.last_time = self.get_clock().now()
+        self.get_logger().info("Cube position reset to origin.")
+        return response
 
 def main(args=None):
     rclpy.init(args=args)
