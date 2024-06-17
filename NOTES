@@ -1,0 +1,9 @@
+Launch Microros:
+ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0
+
+Launch Cube w/ Lidar:
+ros2 launch cube_localizer cube_localizer.launch.py
+
+
+Reset Cube:
+ros2 service call /reset_cube std_srvs/srv/Empty
