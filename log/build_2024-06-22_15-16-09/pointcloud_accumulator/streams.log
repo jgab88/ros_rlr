@@ -1,0 +1,35 @@
+[0.646s] Invoking command in '/home/jg/ros_rlr/src/pt_accumulator': PYTHONPATH=/home/jg/ros_rlr/build/pointcloud_accumulator/prefix_override:/home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pointcloud_accumulator build --build-base /home/jg/ros_rlr/build/pointcloud_accumulator/build install --record /home/jg/ros_rlr/build/pointcloud_accumulator/install.log --single-version-externally-managed install_data
+[0.863s] running egg_info
+[0.865s] creating ../../build/pointcloud_accumulator/pt_accumulator.egg-info
+[0.865s] writing ../../build/pointcloud_accumulator/pt_accumulator.egg-info/PKG-INFO
+[0.865s] writing dependency_links to ../../build/pointcloud_accumulator/pt_accumulator.egg-info/dependency_links.txt
+[0.865s] writing entry points to ../../build/pointcloud_accumulator/pt_accumulator.egg-info/entry_points.txt
+[0.865s] writing requirements to ../../build/pointcloud_accumulator/pt_accumulator.egg-info/requires.txt
+[0.865s] writing top-level names to ../../build/pointcloud_accumulator/pt_accumulator.egg-info/top_level.txt
+[0.865s] writing manifest file '../../build/pointcloud_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+[0.869s] reading manifest file '../../build/pointcloud_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+[0.869s] writing manifest file '../../build/pointcloud_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+[0.869s] running build
+[0.869s] running build_py
+[0.869s] creating /home/jg/ros_rlr/build/pointcloud_accumulator/build
+[0.869s] creating /home/jg/ros_rlr/build/pointcloud_accumulator/build/lib
+[0.869s] creating /home/jg/ros_rlr/build/pointcloud_accumulator/build/lib/pt_accumulator
+[0.869s] copying pt_accumulator/pt_accumulator.py -> /home/jg/ros_rlr/build/pointcloud_accumulator/build/lib/pt_accumulator
+[0.869s] copying pt_accumulator/__init__.py -> /home/jg/ros_rlr/build/pointcloud_accumulator/build/lib/pt_accumulator
+[0.870s] running install
+[0.870s] running install_lib
+[0.871s] creating /home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages/pt_accumulator
+[0.871s] copying /home/jg/ros_rlr/build/pointcloud_accumulator/build/lib/pt_accumulator/pt_accumulator.py -> /home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages/pt_accumulator
+[0.871s] copying /home/jg/ros_rlr/build/pointcloud_accumulator/build/lib/pt_accumulator/__init__.py -> /home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages/pt_accumulator
+[0.871s] byte-compiling /home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages/pt_accumulator/pt_accumulator.py to pt_accumulator.cpython-310.pyc
+[0.872s] byte-compiling /home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages/pt_accumulator/__init__.py to __init__.cpython-310.pyc
+[0.872s] running install_data
+[0.872s] copying resource/pt_accumulator -> /home/jg/ros_rlr/install/pointcloud_accumulator/share/ament_index/resource_index/packages
+[0.872s] creating /home/jg/ros_rlr/install/pointcloud_accumulator/share/pt_accumulator
+[0.872s] copying package.xml -> /home/jg/ros_rlr/install/pointcloud_accumulator/share/pt_accumulator
+[0.872s] running install_egg_info
+[0.873s] Copying ../../build/pointcloud_accumulator/pt_accumulator.egg-info to /home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages/pt_accumulator-0.0.1-py3.10.egg-info
+[0.874s] running install_scripts
+[0.891s] Installing pt_accumulator script to /home/jg/ros_rlr/install/pointcloud_accumulator/lib/pt_accumulator
+[0.891s] writing list of installed files to '/home/jg/ros_rlr/build/pointcloud_accumulator/install.log'
+[0.924s] Invoked command in '/home/jg/ros_rlr/src/pt_accumulator' returned '0': PYTHONPATH=/home/jg/ros_rlr/build/pointcloud_accumulator/prefix_override:/home/jg/ros_rlr/install/pointcloud_accumulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pointcloud_accumulator build --build-base /home/jg/ros_rlr/build/pointcloud_accumulator/build install --record /home/jg/ros_rlr/build/pointcloud_accumulator/install.log --single-version-externally-managed install_data

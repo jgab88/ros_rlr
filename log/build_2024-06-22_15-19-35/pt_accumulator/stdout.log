@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/pt_accumulator/pt_accumulator.egg-info/PKG-INFO
+writing dependency_links to ../../build/pt_accumulator/pt_accumulator.egg-info/dependency_links.txt
+writing entry points to ../../build/pt_accumulator/pt_accumulator.egg-info/entry_points.txt
+writing requirements to ../../build/pt_accumulator/pt_accumulator.egg-info/requires.txt
+writing top-level names to ../../build/pt_accumulator/pt_accumulator.egg-info/top_level.txt
+reading manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+writing manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+creating /home/jg/ros_rlr/install/pt_accumulator/share/pt_accumulator/launch
+copying launch/pt_accumulator_launch.py -> /home/jg/ros_rlr/install/pt_accumulator/share/pt_accumulator/launch
+running install_egg_info
+removing '/home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/pt_accumulator/pt_accumulator.egg-info to /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator-0.0.1-py3.10.egg-info
+running install_scripts
+Installing pt_accumulator script to /home/jg/ros_rlr/install/pt_accumulator/lib/pt_accumulator
+writing list of installed files to '/home/jg/ros_rlr/build/pt_accumulator/install.log'

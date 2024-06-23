@@ -1,0 +1,25 @@
+[0.652s] Invoking command in '/home/jg/ros_rlr/src/pt_accumulator': PYTHONPATH=/home/jg/ros_rlr/build/pt_accumulator/prefix_override:/home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pt_accumulator build --build-base /home/jg/ros_rlr/build/pt_accumulator/build install --record /home/jg/ros_rlr/build/pt_accumulator/install.log --single-version-externally-managed install_data
+[0.856s] running egg_info
+[0.859s] writing ../../build/pt_accumulator/pt_accumulator.egg-info/PKG-INFO
+[0.859s] writing dependency_links to ../../build/pt_accumulator/pt_accumulator.egg-info/dependency_links.txt
+[0.859s] writing entry points to ../../build/pt_accumulator/pt_accumulator.egg-info/entry_points.txt
+[0.859s] writing requirements to ../../build/pt_accumulator/pt_accumulator.egg-info/requires.txt
+[0.859s] writing top-level names to ../../build/pt_accumulator/pt_accumulator.egg-info/top_level.txt
+[0.861s] reading manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+[0.861s] writing manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+[0.861s] running build
+[0.862s] running build_py
+[0.862s] copying pt_accumulator/pt_accumulator.py -> /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator
+[0.862s] running install
+[0.864s] running install_lib
+[0.864s] copying /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator/pt_accumulator.py -> /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator
+[0.865s] byte-compiling /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator/pt_accumulator.py to pt_accumulator.cpython-310.pyc
+[0.866s] running install_data
+[0.866s] copying package.xml -> /home/jg/ros_rlr/install/pt_accumulator/share/pt_accumulator
+[0.866s] running install_egg_info
+[0.867s] removing '/home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator-0.0.1-py3.10.egg-info' (and everything under it)
+[0.868s] Copying ../../build/pt_accumulator/pt_accumulator.egg-info to /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator-0.0.1-py3.10.egg-info
+[0.868s] running install_scripts
+[0.886s] Installing pt_accumulator script to /home/jg/ros_rlr/install/pt_accumulator/lib/pt_accumulator
+[0.887s] writing list of installed files to '/home/jg/ros_rlr/build/pt_accumulator/install.log'
+[0.915s] Invoked command in '/home/jg/ros_rlr/src/pt_accumulator' returned '0': PYTHONPATH=/home/jg/ros_rlr/build/pt_accumulator/prefix_override:/home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pt_accumulator build --build-base /home/jg/ros_rlr/build/pt_accumulator/build install --record /home/jg/ros_rlr/build/pt_accumulator/install.log --single-version-externally-managed install_data

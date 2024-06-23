@@ -1,0 +1,4 @@
+Invoking command in '/home/jg/ros_rlr/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jg/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/jg/ros_rlr/build/sllidar_ros2 -- -j8 -l8
+Invoked command in '/home/jg/ros_rlr/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jg/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/jg/ros_rlr/build/sllidar_ros2 -- -j8 -l8
+Invoking command in '/home/jg/ros_rlr/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jg/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --install /home/jg/ros_rlr/build/sllidar_ros2
+Invoked command in '/home/jg/ros_rlr/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jg/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --install /home/jg/ros_rlr/build/sllidar_ros2

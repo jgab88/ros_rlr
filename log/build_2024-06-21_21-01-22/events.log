@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000462] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.000890] (-) JobUnselected: {'identifier': 'sllidar_ros2'}
+[0.000952] (cube_localizer) JobQueued: {'identifier': 'cube_localizer', 'dependencies': OrderedDict([('sllidar_ros2', '/home/jg/ros_rlr/install/sllidar_ros2')])}
+[0.000976] (cube_localizer) JobStarted: {'identifier': 'cube_localizer'}
+[0.006058] (cube_localizer) JobEnded: {'identifier': 'cube_localizer', 'rc': 1}
+[0.016380] (-) EventReactorShutdown: {}

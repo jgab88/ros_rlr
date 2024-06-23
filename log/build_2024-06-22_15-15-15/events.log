@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000262] (-) JobUnselected: {'identifier': 'cube_localizer'}
+[0.000286] (-) JobUnselected: {'identifier': 'pointcloud_accumulator'}
+[0.000302] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.000441] (-) JobUnselected: {'identifier': 'sllidar_ros2'}
+[0.000596] (-) EventReactorShutdown: {}

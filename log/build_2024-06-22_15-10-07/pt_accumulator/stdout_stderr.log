@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/pt_accumulator/pt_accumulator.egg-info
+writing ../../build/pt_accumulator/pt_accumulator.egg-info/PKG-INFO
+writing dependency_links to ../../build/pt_accumulator/pt_accumulator.egg-info/dependency_links.txt
+writing entry points to ../../build/pt_accumulator/pt_accumulator.egg-info/entry_points.txt
+writing requirements to ../../build/pt_accumulator/pt_accumulator.egg-info/requires.txt
+writing top-level names to ../../build/pt_accumulator/pt_accumulator.egg-info/top_level.txt
+writing manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+reading manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+writing manifest file '../../build/pt_accumulator/pt_accumulator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jg/ros_rlr/build/pt_accumulator/build
+creating /home/jg/ros_rlr/build/pt_accumulator/build/lib
+creating /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator
+copying pt_accumulator/pt_accumulator.py -> /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator
+copying pt_accumulator/__init__.py -> /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator
+running install
+running install_lib
+creating /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator
+copying /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator/pt_accumulator.py -> /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator
+copying /home/jg/ros_rlr/build/pt_accumulator/build/lib/pt_accumulator/__init__.py -> /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator
+byte-compiling /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator/pt_accumulator.py to pt_accumulator.cpython-310.pyc
+byte-compiling /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/jg/ros_rlr/install/pt_accumulator/share/ament_index
+creating /home/jg/ros_rlr/install/pt_accumulator/share/ament_index/resource_index
+creating /home/jg/ros_rlr/install/pt_accumulator/share/ament_index/resource_index/packages
+copying resource/pt_accumulator -> /home/jg/ros_rlr/install/pt_accumulator/share/ament_index/resource_index/packages
+copying package.xml -> /home/jg/ros_rlr/install/pt_accumulator/share/pt_accumulator
+running install_egg_info
+Copying ../../build/pt_accumulator/pt_accumulator.egg-info to /home/jg/ros_rlr/install/pt_accumulator/lib/python3.10/site-packages/pt_accumulator-0.0.1-py3.10.egg-info
+running install_scripts
+Installing pt_accumulator script to /home/jg/ros_rlr/install/pt_accumulator/lib/pt_accumulator
+writing list of installed files to '/home/jg/ros_rlr/build/pt_accumulator/install.log'

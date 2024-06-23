@@ -7,7 +7,7 @@
   <maintainer email="jerry.gabrie@gmail.com">jg</maintainer>
   <license>TODO: License declaration</license>
 
-  <depend>rplidar_ros</depend>
+  <depend>sllidar_ros2</depend>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
