@@ -47,7 +47,8 @@ class CubeLocalizer(Node):
         self.heading = yaw
 
         self.height = 0.5 + 0.5 * math.sin(current_time.nanoseconds / 1e9)
-        self.speed = 0.5 + 0.5 * math.cos(current_time.nanoseconds / 1e9)
+#       self.speed = 0.5 + 0.5 * math.cos(current_time.nanoseconds / 1e9) //oscillate speed
+        self.speed = 0.5 # // constant speed
 
         self.x += self.speed * math.cos(self.heading) * dt
         self.y += self.speed * math.sin(self.heading) * dt
