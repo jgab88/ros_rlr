@@ -10,6 +10,9 @@ from rclpy.time import Time
 import threading
 import copy
 import time
+import concurrent.futures
+from queue import Queue, PriorityQueue
+import os
 
 class MeshGenerator(Node):
     def __init__(self):
@@ -23,14 +26,33 @@ class MeshGenerator(Node):
         self.mesh_update_interval = 5.0  # Update mesh every 5 seconds
         self.last_mesh_update_time = self.get_clock().now()
         self.lock = threading.Lock()
-        self.max_points = 1000000  # Maximum number of points to keep
-        self.marker_id = 0  # Unique ID for each marker
+        self.max_points = 100000  # Maximum number of points to keep
+
+        # Mesh generation variables
+        self.mesh_id = 0
+        self.processing_meshes = set()
+        self.completed_meshes = PriorityQueue()
+        self.mesh_queue = Queue()
+        self.thread_pool = concurrent.futures.ThreadPoolExecutor(max_workers=3)  # Adjust as needed
+        self.mesh_generation_thread = threading.Thread(target=self.mesh_generation_worker)
+        self.mesh_generation_thread.start()
 
         # Create a publisher for the mesh as a marker array
         self.mesh_pub = self.create_publisher(MarkerArray, '/cube_marker_array', 10)
 
         # Create a timer for periodic mesh updates
         self.create_timer(1.0, self.mesh_update_timer_callback)
+
+        # Create a timer for publishing completed meshes
+        self.create_timer(0.1, self.publish_completed_meshes)
+
+        self.next_mesh_to_publish = 1
+
+        # Complete mesh saving variables
+        self.total_scans = 0
+        self.save_interval = 100  # Save mesh every 100 scans
+        self.output_directory = "output_meshes"  # Directory to save mesh files
+        os.makedirs(self.output_directory, exist_ok=True)
 
     def scan_callback(self, msg):
         current_time = self.get_clock().now()
@@ -85,36 +107,46 @@ class MeshGenerator(Node):
 
         with self.lock:
             self.accumulated_cloud += cloud
-            # Implement sliding window
             if len(self.accumulated_cloud.points) > self.max_points:
-                self.accumulated_cloud = self.accumulated_cloud.select_by_index(range(len(self.accumulated_cloud.points) - self.max_points, len(self.accumulated_cloud.points)))
+                excess_points = len(self.accumulated_cloud.points) - self.max_points
+                self.accumulated_cloud = self.accumulated_cloud.select_by_index(range(excess_points, len(self.accumulated_cloud.points)))
 
         self.get_logger().info(f"Accumulated {len(points)} points. Total: {len(self.accumulated_cloud.points)}")
+
+        self.total_scans += 1
+        if self.total_scans % self.save_interval == 0:
+            self.save_complete_mesh()
 
     def mesh_update_timer_callback(self):
         current_time = self.get_clock().now()
         if (current_time - self.last_mesh_update_time).nanoseconds / 1e9 >= self.mesh_update_interval:
-            self.update_and_publish_mesh()
+            self.mesh_id += 1
+            self.mesh_queue.put(self.mesh_id)
             self.last_mesh_update_time = current_time
 
-    def update_and_publish_mesh(self):
+    def mesh_generation_worker(self):
+        while rclpy.ok():
+            mesh_id = self.mesh_queue.get()
+            if mesh_id is None:
+                break
+            if mesh_id not in self.processing_meshes:
+                self.processing_meshes.add(mesh_id)
+                self.thread_pool.submit(self.generate_and_publish_mesh, mesh_id)
+
+    def generate_and_publish_mesh(self, mesh_id):
         start_time = time.time()
-        with self.lock:
-            if len(self.accumulated_cloud.points) < 100:
-                self.get_logger().warn("Not enough points to create a mesh")
-                return
-
-            # Create a copy of the point cloud for mesh generation
-            cloud_copy = copy.deepcopy(self.accumulated_cloud)
-
-        self.get_logger().info(f"Generating mesh from {len(cloud_copy.points)} points")
-
         try:
+            with self.lock:
+                cloud_copy = copy.deepcopy(self.accumulated_cloud)
+
+            self.get_logger().info(f"Generating mesh {mesh_id} from {len(cloud_copy.points)} points")
+
             # Downsample the point cloud
-            downsampled_cloud = cloud_copy.voxel_down_sample(voxel_size=0.02)
+            voxel_size = 0.02 if len(cloud_copy.points) < 20000 else 0.05
+            downsampled_cloud = cloud_copy.voxel_down_sample(voxel_size=voxel_size)
 
             # Estimate normals
-            downsampled_cloud.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.05, max_nn=50))
+            downsampled_cloud.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30))
 
             # Create mesh
             distances = downsampled_cloud.compute_nearest_neighbor_distance()
@@ -132,24 +164,33 @@ class MeshGenerator(Node):
             mesh.remove_duplicated_vertices()
             mesh.remove_non_manifold_edges()
 
-            # Convert mesh to marker array
-            marker_array = self.mesh_to_marker_array(mesh)
-
-            # Publish marker array
-            self.mesh_pub.publish(marker_array)
-            end_time = time.time()
-            self.get_logger().info(f"Mesh published with {len(mesh.triangles)} triangles. Processing time: {end_time - start_time:.2f} seconds")
+            marker_array = self.mesh_to_marker_array(mesh, mesh_id)
+            self.completed_meshes.put((mesh_id, marker_array))
+            
+            self.get_logger().info(f"Mesh {mesh_id} generated with {len(mesh.triangles)} triangles. Processing time: {time.time() - start_time:.2f} seconds")
         except Exception as e:
-            self.get_logger().error(f"Error in mesh generation: {str(e)}")
+            self.get_logger().error(f"Error generating mesh {mesh_id}: {str(e)}")
+        finally:
+            self.processing_meshes.remove(mesh_id)
 
-    def mesh_to_marker_array(self, mesh):
+    def publish_completed_meshes(self):
+        while not self.completed_meshes.empty():
+            mesh_id, marker_array = self.completed_meshes.queue[0]  # Peek at the top item
+            if mesh_id == self.next_mesh_to_publish:
+                self.completed_meshes.get()  # Remove the item from the queue
+                self.mesh_pub.publish(marker_array)
+                self.get_logger().info(f"Published mesh {mesh_id}")
+                self.next_mesh_to_publish += 1
+            else:
+                break  # Wait for the next mesh in sequence
+
+    def mesh_to_marker_array(self, mesh, mesh_id):
         marker_array = MarkerArray()
         marker = Marker()
         marker.header.frame_id = "map"
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = "mesh"
-        marker.id = self.marker_id
-        self.marker_id += 1  # Increment the ID for the next marker
+        marker.id = mesh_id
         marker.type = Marker.TRIANGLE_LIST
         marker.action = Marker.ADD
         marker.pose.orientation.w = 1.0
@@ -167,18 +208,65 @@ class MeshGenerator(Node):
                 point = vertices[vertex_id]
                 marker.points.append(Point(x=float(point[0]), y=float(point[1]), z=float(point[2])))
 
-        marker_array.markers.append(marker)
-
         # Add a deletion marker for the previous mesh
-        deletion_marker = Marker()
-        deletion_marker.header.frame_id = "map"
-        deletion_marker.header.stamp = self.get_clock().now().to_msg()
-        deletion_marker.ns = "mesh"
-        deletion_marker.id = self.marker_id - 2  # ID of the previous mesh
-        deletion_marker.action = Marker.DELETE
-        marker_array.markers.append(deletion_marker)
+        if mesh_id > 1:
+            deletion_marker = Marker()
+            deletion_marker.header.frame_id = "map"
+            deletion_marker.header.stamp = self.get_clock().now().to_msg()
+            deletion_marker.ns = "mesh"
+            deletion_marker.id = mesh_id - 1
+            deletion_marker.action = Marker.DELETE
+            marker_array.markers.append(deletion_marker)
 
+        marker_array.markers.append(marker)
         return marker_array
+
+    def save_complete_mesh(self):
+        start_time = time.time()
+        try:
+            with self.lock:
+                cloud_copy = copy.deepcopy(self.accumulated_cloud)
+
+            self.get_logger().info(f"Generating complete mesh from {len(cloud_copy.points)} points")
+
+            # Downsample the point cloud
+            voxel_size = 0.02 if len(cloud_copy.points) < 20000 else 0.05
+            downsampled_cloud = cloud_copy.voxel_down_sample(voxel_size=voxel_size)
+
+            # Estimate normals
+            downsampled_cloud.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30))
+
+            # Create mesh
+            distances = downsampled_cloud.compute_nearest_neighbor_distance()
+            avg_dist = np.mean(distances)
+            radius = 2 * avg_dist
+            mesh = o3d.geometry.TriangleMesh.create_from_point_cloud_ball_pivoting(
+                downsampled_cloud, o3d.utility.DoubleVector([radius, radius * 2]))
+
+            # Simplify mesh
+            mesh = mesh.simplify_quadric_decimation(target_number_of_triangles=100000)  # Increased for final mesh
+
+            # Mesh cleaning
+            mesh.remove_degenerate_triangles()
+            mesh.remove_duplicated_triangles()
+            mesh.remove_duplicated_vertices()
+            mesh.remove_non_manifold_edges()
+
+            # Save mesh
+            filename = os.path.join(self.output_directory, f"complete_mesh_{self.total_scans}.ply")
+            o3d.io.write_triangle_mesh(filename, mesh)
+            
+            self.get_logger().info(f"Complete mesh saved to {filename}. Processing time: {time.time() - start_time:.2f} seconds")
+        except Exception as e:
+            self.get_logger().error(f"Error saving complete mesh: {str(e)}")
+
+    def destroy_node(self):
+        # Save final mesh before shutting down
+        self.save_complete_mesh()
+        self.mesh_queue.put(None)  # Signal the worker thread to exit
+        self.mesh_generation_thread.join()
+        self.thread_pool.shutdown()
+        super().destroy_node()
 
 def main(args=None):
     rclpy.init(args=args)
