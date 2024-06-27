@@ -1,7 +1,0 @@
-digraph G {
-"map" -> "laser_frame"[label=" Broadcaster: default_authority\nAverage rate: 9.829\nBuffer length: 2.849\nMost recent transform: 1719023658.115961\nOldest transform: 1719023655.267252\n"];
-edge [style=invis];
- subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 1719023658.1201694"[ shape=plaintext ] ;
-}->"map";
-}
