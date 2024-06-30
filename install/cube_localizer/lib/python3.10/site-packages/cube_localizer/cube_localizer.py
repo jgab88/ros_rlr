@@ -21,7 +21,6 @@ class CubeLocalizer(Node):
         )
 
         self.imu_sub = self.create_subscription(Imu, 'imu/data', self.imu_callback, qos_profile)
-        self.lidar_sub = self.create_subscription(LaserScan, '/scan', self.lidar_callback, qos_profile)
         self.pose_pub = self.create_publisher(PoseStamped, 'cube_pose', 10)
         self.marker_pub = self.create_publisher(Marker, 'cube_marker', 10)
         self.adjusted_scan_pub = self.create_publisher(LaserScan, 'adjusted_scan', 10)
@@ -37,6 +36,13 @@ class CubeLocalizer(Node):
         self.heading = 0.0
         self.last_time = self.get_clock().now()
 
+        self.pipe_radius = 0.6096  # 48 inches in meters
+        self.radius_variation = 0.05  # 5cm variation in pipe radius
+        self.texture_variation = 0.02  # 2cm variation for surface texture
+
+        # Timer for simulating LaserScan data
+        self.create_timer(0.1, self.simulate_laser_scan)  # 10Hz
+
     def imu_callback(self, msg):
         current_time = self.get_clock().now()
         dt = (current_time - self.last_time).nanoseconds / 1e9
@@ -47,8 +53,7 @@ class CubeLocalizer(Node):
         self.heading = yaw
 
         self.height = 0.5 + 0.5 * math.sin(current_time.nanoseconds / 1e9)
-#       self.speed = 0.5 + 0.5 * math.cos(current_time.nanoseconds / 1e9) //oscillate speed
-        self.speed = 0.5 # // constant speed
+        self.speed = 0.5  # constant speed
 
         self.x += self.speed * math.cos(self.heading) * dt
         self.y += self.speed * math.sin(self.heading) * dt
@@ -76,13 +81,10 @@ class CubeLocalizer(Node):
         marker.color.a = 1.0
         self.marker_pub.publish(marker)
 
-        # Create a rotation to make the laser scan vertical (90 degrees around X-axis)
-        vertical_rotation = quaternion_from_euler(0, math.pi/2, 0)
-    
-        # Combine the vertical rotation with the current orientation
-        combined_rotation = quaternion_multiply(
+        # Modify the transform to orient the laser scan correctly
+        laser_orientation = quaternion_multiply(
             [orientation.x, orientation.y, orientation.z, orientation.w],
-            vertical_rotation
+            quaternion_from_euler(0, -math.pi/2, 0)  # Rotate 90 degrees around Y-axis
         )
 
         # Publish transform slightly into the future
@@ -94,58 +96,46 @@ class CubeLocalizer(Node):
         transform.transform.translation.x = self.x
         transform.transform.translation.y = self.y
         transform.transform.translation.z = self.z
-        transform.transform.rotation = Quaternion(x=combined_rotation[0], y=combined_rotation[1], 
-                                                  z=combined_rotation[2], w=combined_rotation[3])
+        transform.transform.rotation = Quaternion(x=laser_orientation[0], y=laser_orientation[1],
+                                                  z=laser_orientation[2], w=laser_orientation[3])
         self.tf_broadcaster.sendTransform(transform)
 
-    def lidar_callback(self, msg):
+    def simulate_laser_scan(self):
         current_time = self.get_clock().now()
-
-        self.get_logger().info(f"Received LaserScan message at {current_time.nanoseconds/1e9:.6f}")
-        self.get_logger().info(f"Message timestamp: {msg.header.stamp.sec}.{msg.header.stamp.nanosec:09d}")
-        self.get_logger().info(f"Frame ID: {msg.header.frame_id}")
-        self.get_logger().info(f"Angle range: [{msg.angle_min:.4f}, {msg.angle_max:.4f}]")
-        self.get_logger().info(f"Angle increment: {msg.angle_increment:.6f}")
-
-        actual_min_range = max(0.1, min(r for r in msg.ranges if r > 0))
-        actual_max_range = min(16.0, max(msg.ranges))
+        current_radius = self.pipe_radius + np.random.uniform(-self.radius_variation, self.radius_variation)
         
-        self.get_logger().info(f"Actual range limits: [{actual_min_range:.2f}, {actual_max_range:.2f}]")
-        self.get_logger().info(f"Total points: {len(msg.ranges)}")
+        num_points = 360
+        angles = np.linspace(0, 2*np.pi, num_points)
         
-        valid_ranges = [r for r in msg.ranges if actual_min_range <= r <= actual_max_range]
-        self.get_logger().info(f"Valid points: {len(valid_ranges)}")
-
-        if valid_ranges:
-            self.get_logger().info(f"Range statistics: min={min(valid_ranges):.2f}, max={max(valid_ranges):.2f}, avg={np.mean(valid_ranges):.2f}")
-        else:
-            self.get_logger().warn("No valid ranges found")
-
-        self.get_logger().info(f"Sample of range values: {msg.ranges[:10]}")
-
-        msg_time = rclpy.time.Time.from_msg(msg.header.stamp)
-        time_diff = (current_time.nanoseconds - msg_time.nanoseconds) / 1e9
-        self.get_logger().info(f"Time difference: {time_diff:.6f} seconds")
+        # Generate circular cross-section
+        y = current_radius * np.cos(angles)
+        z = current_radius * np.sin(angles)
+        
+        # Add turbulation to simulate surface texture
+        texture = np.random.uniform(-self.texture_variation, self.texture_variation, num_points)
+        ranges = np.sqrt(y**2 + z**2) + texture
+        
+        # Replace any invalid values with max_range
+        ranges = np.clip(ranges, 0.1, 16.0)
 
         # Create and publish adjusted LaserScan message
-        # Use the same timestamp for LaserScan as for the transform
-        future_time = current_time + Duration(seconds=0.1)
         adjusted_msg = LaserScan()
-        adjusted_msg.header = msg.header
-        adjusted_msg.header.stamp = future_time.to_msg()
-        adjusted_msg.angle_min = msg.angle_min
-        adjusted_msg.angle_max = msg.angle_max
-        adjusted_msg.angle_increment = msg.angle_increment
-        adjusted_msg.time_increment = msg.time_increment
-        adjusted_msg.scan_time = msg.scan_time
-        adjusted_msg.range_min = actual_min_range
-        adjusted_msg.range_max = actual_max_range
-        adjusted_msg.ranges = msg.ranges
-        adjusted_msg.intensities = msg.intensities
+        adjusted_msg.header.stamp = current_time.to_msg()
+        adjusted_msg.header.frame_id = 'laser_frame'
+        adjusted_msg.angle_min = 0.0  # Change this to 0.0 (float)
+        adjusted_msg.angle_max = 2.0 * np.pi  # Change this to 2.0 * np.pi (float)
+        adjusted_msg.angle_increment = (2.0 * np.pi) / num_points  # Ensure this is a float
+        adjusted_msg.time_increment = 0.0
+        adjusted_msg.scan_time = 0.1
+        adjusted_msg.range_min = 0.1
+        adjusted_msg.range_max = 16.0
+        adjusted_msg.ranges = ranges.tolist()
+
         self.adjusted_scan_pub.publish(adjusted_msg)
 
-        self.get_logger().info("LaserScan processing completed")
-        self.get_logger().info("----------------------------")
+        self.get_logger().info(f"Published simulated pipe scan. Radius: {current_radius:.3f}m")
+        self.get_logger().info(f"Number of points: {num_points}")
+        self.get_logger().info(f"Range statistics: min={np.min(ranges):.2f}, max={np.max(ranges):.2f}, avg={np.mean(ranges):.2f}")
 
     def euler_from_quaternion(self, quaternion):
         x, y, z, w = quaternion.x, quaternion.y, quaternion.z, quaternion.w

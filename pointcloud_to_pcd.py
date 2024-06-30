@@ -10,7 +10,7 @@ from sensor_msgs_py import point_cloud2
 def main():
     rclpy.init()
 
-    storage_options = StorageOptions(uri='/home/jg/ros_rlr/rosbag2_2024_06_29-17_42_25/rosbag2_2024_06_29-17_42_25_0.db3', storage_id='sqlite3')
+    storage_options = StorageOptions(uri='/home/jg/ros_rlr/rosbag2_2024_06_29-22_57_20/rosbag2_2024_06_29-22_57_20_0.db3', storage_id='sqlite3')
     converter_options = ConverterOptions(input_serialization_format='cdr', output_serialization_format='cdr')
 
     reader = SequentialReader()

@@ -64,17 +64,17 @@ def generate_launch_description():
             arguments=['-d', rviz_config]
         ),
 
-        Node(
-            package='sllidar_ros2',
-            executable='sllidar_node',
-            name='sllidar_node',
-            parameters=[{
-                'channel_type': channel_type,
-                'serial_port': serial_port, 
-                'serial_baudrate': serial_baudrate, 
-                'frame_id': frame_id,
-                'inverted': inverted, 
-                'angle_compensate': angle_compensate, 
-                'scan_mode': scan_mode}],
-            output='screen'),
+        #Node(
+        #    package='sllidar_ros2',
+        #    executable='sllidar_node',
+        #    name='sllidar_node',
+        #    parameters=[{
+        #        'channel_type': channel_type,
+        #        'serial_port': serial_port, 
+        #        'serial_baudrate': serial_baudrate, 
+        #        'frame_id': frame_id,
+        #        'inverted': inverted, 
+        #        'angle_compensate': angle_compensate, 
+        #        'scan_mode': scan_mode}],
+        #    output='screen'),
     ])
