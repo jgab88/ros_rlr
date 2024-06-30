@@ -23,7 +23,7 @@ class MeshGenerator(Node):
         self.accumulated_cloud = o3d.geometry.PointCloud()
         self.last_accumulation_time = self.get_clock().now()
         self.accumulation_interval = 0.1  # Accumulate points every 0.1 seconds
-        self.mesh_update_interval = 5.0  # Update mesh every 5 seconds
+        self.mesh_update_interval = 2.0  # Update mesh every 5* seconds
         self.last_mesh_update_time = self.get_clock().now()
         self.lock = threading.Lock()
         self.max_points = 1000000  # Maximum number of points to keep for mesh generation
@@ -39,7 +39,7 @@ class MeshGenerator(Node):
         self.processing_meshes = set()
         self.completed_meshes = PriorityQueue()
         self.mesh_queue = Queue()
-        self.thread_pool = concurrent.futures.ThreadPoolExecutor(max_workers=3)  # Adjust as needed
+        self.thread_pool = concurrent.futures.ThreadPoolExecutor(max_workers=6)  # Adjust as needed 3*
         self.mesh_generation_thread = threading.Thread(target=self.mesh_generation_worker)
         self.mesh_generation_thread.start()
 
@@ -56,7 +56,7 @@ class MeshGenerator(Node):
 
         # Complete mesh saving variables
         self.total_scans = 0
-        self.save_interval = 100  # Save mesh every 100 scans
+        self.save_interval = 50  # Save mesh every 100* scans
         self.output_directory = "output_data"  # Directory to save mesh and point cloud files
         os.makedirs(self.output_directory, exist_ok=True)
 
@@ -155,7 +155,7 @@ class MeshGenerator(Node):
             self.get_logger().info(f"Generating mesh {mesh_id} from {len(cloud_copy.points)} points")
 
             # Downsample the point cloud
-            voxel_size = 0.02 if len(cloud_copy.points) < 20000 else 0.05
+            voxel_size = 0.02 if len(cloud_copy.points) < 50000 else 0.05 #voxel size 0.02 if cloud points is < 20000*, other wise voxel size .05
             downsampled_cloud = cloud_copy.voxel_down_sample(voxel_size=voxel_size)
 
             # Estimate normals
@@ -169,13 +169,13 @@ class MeshGenerator(Node):
                 downsampled_cloud, o3d.utility.DoubleVector([radius, radius * 2]))
 
             # Simplify mesh
-            mesh = mesh.simplify_quadric_decimation(target_number_of_triangles=30000)  # Increased number of triangles
+            mesh = mesh.simplify_quadric_decimation(target_number_of_triangles=130000)  # Increased number of triangles (30000*)
 
             # Mesh cleaning
-            mesh.remove_degenerate_triangles()
-            mesh.remove_duplicated_triangles()
-            mesh.remove_duplicated_vertices()
-            mesh.remove_non_manifold_edges()
+            #mesh.remove_degenerate_triangles()
+            #mesh.remove_duplicated_triangles()
+            #mesh.remove_duplicated_vertices()
+            #mesh.remove_non_manifold_edges()
 
             marker_array = self.mesh_to_marker_array(mesh, mesh_id)
             self.completed_meshes.put((mesh_id, marker_array))
@@ -243,7 +243,7 @@ class MeshGenerator(Node):
             self.get_logger().info(f"Generating complete mesh from {len(cloud_copy.points)} points")
 
             # Downsample the point cloud
-            voxel_size = 0.02 if len(cloud_copy.points) < 20000 else 0.05
+            voxel_size = 0.02 if len(cloud_copy.points) < 50000 else 0.05 #voxel size 0.02 if cloud points is < 20000*, other wise voxel size .05
             downsampled_cloud = cloud_copy.voxel_down_sample(voxel_size=voxel_size)
 
             # Estimate normals
