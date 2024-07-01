@@ -36,9 +36,9 @@ class CubeLocalizer(Node):
         self.heading = 0.0
         self.last_time = self.get_clock().now()
 
-        self.pipe_radius = 0.6096  # 48 inches in meters
-        self.radius_variation = 0.05  # 5cm variation in pipe radius
-        self.texture_variation = 0.02  # 2cm variation for surface texture
+        self.pipe_radius = 0.6096  # 48 inches in meters 0.6096*
+        self.radius_variation = 0.0075  # 5cm* variation in pipe radius 0.025*
+        self.texture_variation = 0.0075  # 2cm* variation for surface texture 0.02*
 
         # Timer for simulating LaserScan data
         self.create_timer(0.1, self.simulate_laser_scan)  # 10Hz
@@ -52,7 +52,7 @@ class CubeLocalizer(Node):
         _, _, yaw = self.euler_from_quaternion(orientation)
         self.heading = yaw
 
-        self.height = 0.5 + 0.5 * math.sin(current_time.nanoseconds / 1e9)
+        self.height = 0.1 + 0.1 * math.sin(current_time.nanoseconds / 1e9) #Height oscilation 0.5 + 0.5*
         self.speed = 0.5  # constant speed
 
         self.x += self.speed * math.cos(self.heading) * dt
