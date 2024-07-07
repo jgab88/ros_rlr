@@ -1,60 +1,19 @@
+import numpy as np
+import open3d as o3d
 import rclpy
 from rclpy.node import Node
 from rclpy.serialization import deserialize_message
 from rosidl_runtime_py.utilities import get_message
-from sensor_msgs.msg import PointCloud2
-from geometry_msgs.msg import TransformStamped
 from rosbag2_py import SequentialReader, StorageOptions, ConverterOptions
-import numpy as np
-import open3d as o3d
 from sensor_msgs_py import point_cloud2
 import tf2_ros
-from tf_transformations import quaternion_matrix
-
-def align_points_to_principal_axes(points):
-    # Center the points
-    centroid = np.mean(points, axis=0)
-    centered_points = points - centroid
-
-    # Compute principal axes
-    covariance_matrix = np.cov(centered_points.T)
-    eigenvalues, eigenvectors = np.linalg.eig(covariance_matrix)
-
-    # Sort eigenvectors by eigenvalues in descending order
-    sort_indices = np.argsort(eigenvalues)[::-1]
-    eigenvectors = eigenvectors[:, sort_indices]
-
-    # Rotate points
-    aligned_points = np.dot(centered_points, eigenvectors)
-
-    return aligned_points, centroid, eigenvectors
-
-def transform_points(points, transform):
-    # Create a 4x4 transformation matrix
-    t = transform.transform
-    trans_matrix = np.eye(4)
-    trans_matrix[:3, 3] = [t.translation.x, t.translation.y, t.translation.z]
-    
-    rot = t.rotation
-    quat = [rot.x, rot.y, rot.z, rot.w]
-    rot_matrix = quaternion_matrix(quat)
-    trans_matrix[:3, :3] = rot_matrix[:3, :3]
-
-    # Add homogeneous coordinate
-    points_homogeneous = np.hstack((points, np.ones((points.shape[0], 1))))
-    
-    # Apply transformation
-    transformed_points = np.dot(trans_matrix, points_homogeneous.T).T
-    
-    # Remove homogeneous coordinate
-    return transformed_points[:, :3]
 
 def main():
     rclpy.init()
     
     node = Node("pointcloud_processor")
 
-    storage_options = StorageOptions(uri='/home/jg/ros_rlr/scanpoint_processing_scripts/rosbag2_2024_06_30-20_47_37/rosbag2_2024_06_30-20_47_37_0.db3', storage_id='sqlite3')
+    storage_options = StorageOptions(uri='/home/jg/ros_rlr/scanpoint_processing_scripts/rosbag2_2024_06_30-20_32_38/rosbag2_2024_06_30-20_32_38_0.db3', storage_id='sqlite3')
     converter_options = ConverterOptions(input_serialization_format='cdr', output_serialization_format='cdr')
 
     reader = SequentialReader()
@@ -64,54 +23,49 @@ def main():
     type_map = {topic_types[i].name: topic_types[i].type for i in range(len(topic_types))}
 
     all_points = []
+    scanner_path = []
     tf_buffer = tf2_ros.Buffer()
     tf_listener = tf2_ros.TransformListener(tf_buffer, node)
 
     while reader.has_next():
         (topic, data, t) = reader.read_next()
         
-        if topic != '/accumulated_point_cloud':
-            continue
+        if topic == '/accumulated_point_cloud':
+            msg_type = get_message(type_map[topic])
+            msg = deserialize_message(data, msg_type)
 
-        msg_type = get_message(type_map[topic])
-        msg = deserialize_message(data, msg_type)
+            pc_data = point_cloud2.read_points(msg, field_names=("x", "y", "z"), skip_nans=True)
+            points = np.array([(p['x'], p['y'], p['z']) for p in pc_data], dtype=np.float64)
+            all_points.append(points)
 
-        pc_data = point_cloud2.read_points(msg, field_names=("x", "y", "z"), skip_nans=True)
-        points = np.array(list(pc_data))
-        points = points.view((np.float32, 3)).reshape(-1, 3)
+        elif topic == '/tf' or topic == '/tf_static':
+            msg_type = get_message(type_map[topic])
+            tf_msg = deserialize_message(data, msg_type)
+            for transform in tf_msg.transforms:
+                if transform.child_frame_id == 'laser_frame':  # or whatever frame your scanner uses
+                    scanner_path.append([
+                        transform.transform.translation.x,
+                        transform.transform.translation.y,
+                        transform.transform.translation.z
+                    ])
 
-        # Try to get the transform from the point cloud frame to the map frame
-        try:
-            transform = tf_buffer.lookup_transform('map', msg.header.frame_id, msg.header.stamp)
-            points = transform_points(points, transform)
-        except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
-            print(f"Failed to lookup transform for point cloud. Using untransformed points.")
-
-        all_points.append(points)
+    if not all_points:
+        print("No point cloud data found in the bag file.")
+        return
 
     combined_points = np.vstack(all_points)
-
-    # Align points to principal axes
-    aligned_points, centroid, eigenvectors = align_points_to_principal_axes(combined_points)
+    scanner_path = np.array(scanner_path)
 
     # Create Open3D point cloud
     pcd = o3d.geometry.PointCloud()
-    pcd.points = o3d.utility.Vector3dVector(aligned_points)
+    pcd.points = o3d.utility.Vector3dVector(combined_points)
 
-    # Filtering: Remove statistical outliers
+    # Process point cloud (filtering, normal estimation, etc.)
     pcd, _ = pcd.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)
-
-    # Downsampling
-    pcd = pcd.voxel_down_sample(voxel_size=0.05)  # Adjust voxel size as needed
-
-    # Estimate normals
+    pcd = pcd.voxel_down_sample(voxel_size=0.05)
     pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30))
-    pcd.orient_normals_consistent_tangent_plane(100)
 
-    # Visualize point cloud
-    o3d.visualization.draw_geometries([pcd])
-
-    # Create meshes using different methods
+    # Create meshes
     print("Creating Poisson mesh...")
     poisson_mesh, _ = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(pcd, depth=9, width=0, scale=1.1, linear_fit=False)
     
@@ -119,21 +73,22 @@ def main():
     radii = [0.05, 0.1, 0.2, 0.4]
     bpa_mesh = o3d.geometry.TriangleMesh.create_from_point_cloud_ball_pivoting(pcd, o3d.utility.DoubleVector(radii))
 
-    # Transform meshes back to original coordinate system
-    poisson_mesh.rotate(eigenvectors.T, center=(0, 0, 0))
-    poisson_mesh.translate(centroid)
-    bpa_mesh.rotate(eigenvectors.T, center=(0, 0, 0))
-    bpa_mesh.translate(centroid)
+    # Save point cloud with original positioning
+    o3d.io.write_point_cloud("output/pipe_scan.pcd", pcd)
 
-    # Visualize the results
-    o3d.visualization.draw_geometries([poisson_mesh])
-    o3d.visualization.draw_geometries([bpa_mesh])
-
-    # Save the meshes
+    # Save meshes
     o3d.io.write_triangle_mesh("output/pipe_mesh_poisson.ply", poisson_mesh)
     o3d.io.write_triangle_mesh("output/pipe_mesh_bpa.ply", bpa_mesh)
 
-    print("Meshes saved as pipe_mesh_poisson.ply and pipe_mesh_bpa.ply")
+    # Save scanner path
+    np.savetxt("output/scanner_path.txt", scanner_path)
+
+    # Create and save a simple spline from the scanner path
+    path_pcd = o3d.geometry.PointCloud()
+    path_pcd.points = o3d.utility.Vector3dVector(scanner_path)
+    o3d.io.write_point_cloud("output/scanner_path_spline.pcd", path_pcd)
+
+    print("Point cloud, meshes, and scanner path saved.")
 
     # Clean up
     node.destroy_node()
