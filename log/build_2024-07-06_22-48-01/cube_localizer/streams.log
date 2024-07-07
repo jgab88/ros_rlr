@@ -1,0 +1,21 @@
+[0.440s] Invoking command in '/home/jg/pipe_scanning/ros_rlr/src/cube_localizer': PYTHONPATH=/home/jg/pipe_scanning/ros_rlr/build/cube_localizer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jg/pipe_scanning/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/jg/pipe_scanning/ros_rlr/build/cube_localizer/build install --record /home/jg/pipe_scanning/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
+[0.605s] running egg_info
+[0.606s] writing ../../build/cube_localizer/cube_localizer.egg-info/PKG-INFO
+[0.606s] writing dependency_links to ../../build/cube_localizer/cube_localizer.egg-info/dependency_links.txt
+[0.606s] writing entry points to ../../build/cube_localizer/cube_localizer.egg-info/entry_points.txt
+[0.606s] writing requirements to ../../build/cube_localizer/cube_localizer.egg-info/requires.txt
+[0.606s] writing top-level names to ../../build/cube_localizer/cube_localizer.egg-info/top_level.txt
+[0.608s] reading manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.608s] writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[0.608s] running build
+[0.608s] running build_py
+[0.609s] running install
+[0.609s] running install_lib
+[0.610s] running install_data
+[0.610s] running install_egg_info
+[0.611s] removing '/home/jg/pipe_scanning/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info' (and everything under it)
+[0.611s] Copying ../../build/cube_localizer/cube_localizer.egg-info to /home/jg/pipe_scanning/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info
+[0.611s] running install_scripts
+[0.625s] Installing cube_localizer script to /home/jg/pipe_scanning/ros_rlr/install/cube_localizer/lib/cube_localizer
+[0.625s] writing list of installed files to '/home/jg/pipe_scanning/ros_rlr/build/cube_localizer/install.log'
+[0.643s] Invoked command in '/home/jg/pipe_scanning/ros_rlr/src/cube_localizer' returned '0': PYTHONPATH=/home/jg/pipe_scanning/ros_rlr/build/cube_localizer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jg/pipe_scanning/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/jg/pipe_scanning/ros_rlr/build/cube_localizer/build install --record /home/jg/pipe_scanning/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
