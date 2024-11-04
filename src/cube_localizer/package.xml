@@ -8,6 +8,7 @@
   <license>TODO: License declaration</license>
 
   <depend>sllidar_ros2</depend>
+  <depend>tf_transformations</depend>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>

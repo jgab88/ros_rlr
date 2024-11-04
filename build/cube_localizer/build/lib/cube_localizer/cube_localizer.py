@@ -46,7 +46,7 @@ class CubeLocalizer(Node):
         _, _, yaw = self.euler_from_quaternion(orientation)
         self.heading = yaw
 
-        self.height = 0.5 + 0.5 * math.sin(current_time.nanoseconds / 1e9)
+        self.height = 0.1 + 0.1 * math.sin(current_time.nanoseconds / 1e9)
 #       self.speed = 0.5 + 0.5 * math.cos(current_time.nanoseconds / 1e9) //oscillate speed
         self.speed = 0.5 # // constant speed
 

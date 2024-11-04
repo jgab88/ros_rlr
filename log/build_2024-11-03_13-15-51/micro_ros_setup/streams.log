@@ -1,0 +1,24 @@
+[0.018s] Invoking command in '/home/jg/ros_rlr/build/micro_ros_setup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jg/ros_rlr/src/micro_ros_setup -DCMAKE_INSTALL_PREFIX=/home/jg/ros_rlr/install/micro_ros_setup
+[0.111s] -- The C compiler identification is GNU 11.4.0
+[0.192s] -- The CXX compiler identification is GNU 11.4.0
+[0.200s] -- Detecting C compiler ABI info
+[0.259s] -- Detecting C compiler ABI info - done
+[0.264s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.265s] -- Detecting C compile features
+[0.265s] -- Detecting C compile features - done
+[0.268s] -- Detecting CXX compiler ABI info
+[0.331s] -- Detecting CXX compiler ABI info - done
+[0.337s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.337s] -- Detecting CXX compile features
+[0.337s] -- Detecting CXX compile features - done
+[0.341s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.462s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.540s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.603s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.621s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.624s] -- Added test 'lint_cmake' to check CMake code style
+[0.625s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.636s] -- Added test 'xmllint' to check XML markup files
+[0.637s] -- Configuring done
+[0.640s] -- Generating done
+[0.641s] -- Build files have been written to: /home/jg/ros_rlr/build/micro_ros_setup

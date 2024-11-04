@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/cube_localizer/cube_localizer.egg-info/PKG-INFO
+writing dependency_links to ../../build/cube_localizer/cube_localizer.egg-info/dependency_links.txt
+writing entry points to ../../build/cube_localizer/cube_localizer.egg-info/entry_points.txt
+writing requirements to ../../build/cube_localizer/cube_localizer.egg-info/requires.txt
+writing top-level names to ../../build/cube_localizer/cube_localizer.egg-info/top_level.txt
+reading manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cube_localizer/cube_localizer.egg-info to /home/jg/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info
+running install_scripts
+Installing cube_localizer script to /home/jg/ros_rlr/install/cube_localizer/lib/cube_localizer
+writing list of installed files to '/home/jg/ros_rlr/build/cube_localizer/install.log'

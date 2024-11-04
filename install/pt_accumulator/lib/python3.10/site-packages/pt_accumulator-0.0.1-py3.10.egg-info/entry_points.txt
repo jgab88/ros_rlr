@@ -1,3 +1,0 @@
-[console_scripts]
-pt_accumulator = pt_accumulator.pt_accumulator:main
-
