@@ -1,0 +1,2 @@
+Invoking command in '/home/nvidia/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4
+Invoked command in '/home/nvidia/ros_rlr/build/rplidar_ros' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4

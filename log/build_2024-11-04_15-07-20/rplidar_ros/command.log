@@ -1,0 +1,2 @@
+Invoking command in '/home/nvidia/ros_rlr/build/rplidar_ros': /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4
+Invoked command in '/home/nvidia/ros_rlr/build/rplidar_ros' returned '2': /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4

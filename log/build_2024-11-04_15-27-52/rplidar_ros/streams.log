@@ -1,0 +1,6 @@
+[0.017s] Invoking command in '/home/nvidia/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4
+[0.025s] [0mCMake Error: The current CMakeCache.txt directory /home/nvidia/ros_rlr/build/rplidar_ros/CMakeCache.txt is different than the directory /home/jg/ros_rlr/build/rplidar_ros where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.039s] [0mCMake Error: The source directory "/home/jg/ros_rlr/src/rplidar_ros2" does not exist.
+[0.040s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.041s] gmake: *** [Makefile:443: cmake_check_build_system] Error 1
+[0.043s] Invoked command in '/home/nvidia/ros_rlr/build/rplidar_ros' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4
