@@ -1,10 +1,10 @@
 CMakeFiles/sllidar_node.dir/sdk/src/sl_crc.cpp.o: \
- /home/jg/ros_rlr/src/sllidar_ros2/sdk/src/sl_crc.cpp \
+ /home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_crc.cpp \
  /usr/include/stdc-predef.h \
- /home/jg/ros_rlr/src/sllidar_ros2/./sdk/include/sl_crc.h \
- /home/jg/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h \
- /home/jg/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h \
- /home/jg/ros_rlr/src/sllidar_ros2/./sdk/include/sl_types.h \
+ /home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_crc.h \
+ /home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h \
+ /home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h \
+ /home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_types.h \
  /usr/include/c++/11/cstdint \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

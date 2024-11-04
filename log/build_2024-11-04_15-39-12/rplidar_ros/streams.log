@@ -1,0 +1,337 @@
+[0.022s] Invoking command in '/home/nvidia/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake /home/nvidia/ros_rlr/src/rplidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros_rlr/install/rplidar_ros
+[0.100s] -- The C compiler identification is GNU 11.4.0
+[0.236s] -- The CXX compiler identification is GNU 11.4.0
+[0.250s] -- Detecting C compiler ABI info
+[0.407s] -- Detecting C compiler ABI info - done
+[0.420s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.421s] -- Detecting C compile features
+[0.421s] -- Detecting C compile features - done
+[0.428s] -- Detecting CXX compiler ABI info
+[0.568s] -- Detecting CXX compiler ABI info - done
+[0.594s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.594s] -- Detecting CXX compile features
+[0.595s] -- Detecting CXX compile features - done
+[0.601s] -- Found ament_cmake_auto: 1.3.10 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.822s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.962s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.108s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.113s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.124s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.139s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.158s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.208s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.212s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.324s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.361s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.409s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.422s] -- Looking for pthread.h
+[1.523s] -- Looking for pthread.h - found
+[1.523s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.621s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.623s] -- Found Threads: TRUE  
+[1.859s] -- Configuring done
+[1.884s] -- Generating done
+[1.884s] -- Build files have been written to: /home/nvidia/ros_rlr/build/rplidar_ros
+[1.898s] Invoked command in '/home/nvidia/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake /home/nvidia/ros_rlr/src/rplidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros_rlr/install/rplidar_ros
+[1.899s] Invoking command in '/home/nvidia/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4
+[1.968s] [ 11%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[1.969s] [ 22%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/src/rplidar_node.cpp.o[0m
+[1.979s] [ 33%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[1.980s] [ 44%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[2.977s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:36[m[K:
+[2.977s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:50:[m[K [01;35m[Kwarning: [m[K"M_PI" redefined
+[2.978s]    50 | #define M_PI 3.1415926535897932384626433832795
+[2.978s]       | 
+[2.978s] In file included from [01m[K/usr/include/c++/11/cmath:45[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.978s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.979s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:34[m[K,
+[2.979s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:36[m[K:
+[2.979s] [01m[K/usr/include/math.h:1151:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[2.979s]  1151 | # define M_PI           3.14159265358979323846  /* pi */
+[2.979s]       | 
+[3.454s] [ 55%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/sdk/src/hal/thread.cpp.o[0m
+[3.487s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[3.488s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/sdkcommon.h:48[m[K,
+[3.488s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[3.492s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[3.493s]    59 |     _u8 data[[01;35m[K0[m[K];
+[3.493s]       |              [01;35m[K^[m[K
+[3.494s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[3.494s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/sdkcommon.h:48[m[K,
+[3.494s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[3.494s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[3.494s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[3.494s]       |                  [01;35m[K^[m[K
+[3.532s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::arch::net::StreamSocketImpl::send(const void*, size_t)[m[K’:
+[3.535s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:438:17:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.535s]   438 |         if ([01;35m[Kans == (int)len[m[K) {
+[3.536s]       |             [01;35m[K~~~~^~~~~~~~~~~[m[K
+[3.543s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/arch/linux/arch_linux.h:42[m[K,
+[3.543s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/sdkcommon.h:40[m[K,
+[3.543s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[3.543s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::arch::net::DGramSocketImpl::sendTo(const rp::net::SocketAddress&, const void*, size_t)[m[K’:
+[3.543s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_socket.cpp:726:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.543s]   726 |             assert([01;35m[Kans == (int)len[m[K);
+[3.544s]       |                    [01;35m[K~~~~^~~~~~~~~~~[m[K
+[3.946s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kbool rp::arch::net::raw_serial::open(const char*, uint32_t, uint32_t)[m[K’:
+[3.946s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:97:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.946s]    97 | bool raw_serial::open(const char * portname, uint32_t baudrate, [01;35m[Kuint32_t flags[m[K)
+[3.946s]       |                                                                 [01;35m[K~~~~~~~~~^~~~~[m[K
+[3.946s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::flush(_u32)[m[K’:
+[3.947s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:281:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.947s]   281 | void raw_serial::flush( [01;35m[K_u32 flags[m[K)
+[3.947s]       |                         [01;35m[K~~~~~^~~~~[m[K
+[3.949s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::waitforsent(_u32, size_t*)[m[K’:
+[3.949s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:286:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.950s]   286 | int raw_serial::waitforsent([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[3.950s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[3.954s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::waitforrecv(_u32, size_t*)[m[K’:
+[3.954s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/arch/linux/net_serial.cpp:292:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.955s]   292 | int raw_serial::waitforrecv([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[3.955s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[4.286s] [ 66%] [32mBuilding CXX object CMakeFiles/rplidar_composition_node.dir/sdk/src/rplidar_driver.cpp.o[0m
+[5.111s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[5.111s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/sdkcommon.h:48[m[K,
+[5.111s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/hal/thread.cpp:35[m[K:
+[5.111s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[5.112s]    59 |     _u8 data[[01;35m[K0[m[K];
+[5.112s]       |              [01;35m[K^[m[K
+[5.112s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[5.112s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/sdkcommon.h:48[m[K,
+[5.112s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/hal/thread.cpp:35[m[K:
+[5.112s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[5.112s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[5.112s]       |                  [01;35m[K^[m[K
+[5.118s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/hal/thread.cpp:43[m[K:
+[5.118s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/arch/linux/thread.hpp:[m[K In static member function ‘[01m[Kstatic rp::hal::Thread rp::hal::Thread::create(thread_proc_t, void*)[m[K’:
+[5.118s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/arch/linux/thread.hpp:48:57:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kthread_proc_t[m[K’ {aka ‘[01m[Klong unsigned int (*)(void*)[m[K’} to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[5.119s]    48 |     pthread_create((pthread_t *)&newborn._handle, NULL, [01;35m[K(void * (*)(void *))proc[m[K, data);
+[5.119s]       |                                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.122s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/arch/linux/thread.hpp:[m[K In member function ‘[01m[Ku_result rp::hal::Thread::join(long unsigned int)[m[K’:
+[5.122s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/src/arch/linux/thread.hpp:129:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.122s]   129 | u_result Thread::join([01;35m[Kunsigned long timeout[m[K)
+[5.122s]       |                       [01;35m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[5.315s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[5.315s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/sdkcommon.h:48[m[K,
+[5.315s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:35[m[K:
+[5.315s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[5.315s]    59 |     _u8 data[[01;35m[K0[m[K];
+[5.315s]       |              [01;35m[K^[m[K
+[5.319s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[5.319s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/sdkcommon.h:48[m[K,
+[5.319s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:35[m[K:
+[5.319s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[5.320s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[5.320s]       |                  [01;35m[K^[m[K
+[5.708s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::reset(_u32)[m[K’:
+[5.709s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:121:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.709s]   121 | u_result RPlidarDriverImplCommon::reset([01;35m[K_u32 timeout[m[K)
+[5.709s]       |                                         [01;35m[K~~~~~^~~~~~~[m[K
+[5.715s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::checkIfTofLidar(bool&, _u32)[m[K’:
+[5.716s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:275:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.716s]   275 | u_result RPlidarDriverImplCommon::checkIfTofLidar(bool & isTofLidar, [01;35m[K_u32 timeout[m[K)
+[5.717s]       |                                                                      [01;35m[K~~~~~^~~~~~~[m[K
+[5.728s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual int rp::standalone::rplidar::RPlidarDriverImplCommon::_getSyncBitByAngle(int, int)[m[K’:
+[5.729s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:671:16:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klast_angleInc_q16[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[5.729s]   671 |     static int [01;35m[Klast_angleInc_q16[m[K = 0;
+[5.729s]       |                [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[5.729s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:673:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsyncBit_check_threshold[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.729s]   673 |     int [01;35m[KsyncBit_check_threshold[m[K = (int)((5 << 16) / angleInc_q16) + 1;//find syncBit in 0~3 degree
+[5.729s]       |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.731s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::_cacheUltraCapsuledScanData()[m[K’:
+[5.732s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:771:46:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klast_scan_count[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.732s]   771 |     size_t                                   [01;35m[Klast_scan_count[m[K = 0;
+[5.732s]       |                                              [01;35m[K^~~~~~~~~~~~~~~[m[K
+[5.738s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual void rp::standalone::rplidar::RPlidarDriverImplCommon::_capsuleToNormal(const rplidar_response_capsule_measurement_nodes_t&, rplidar_response_measurement_node_hq_t*, size_t&)[m[K’:
+[5.738s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:850:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsyncBit_check_threshold[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.740s]   850 |             int [01;35m[KsyncBit_check_threshold[m[K = (int)((2 << 16) / angleInc_q16) + 1;//find syncBit in 0~1 degree
+[5.741s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.745s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual void rp::standalone::rplidar::RPlidarDriverImplCommon::_dense_capsuleToNormal(const rplidar_response_capsule_measurement_nodes_t&, rplidar_response_measurement_node_hq_t*, size_t&)[m[K’:
+[5.746s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:903:30:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on cast result type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+[5.746s]   903 |             const int dist = [01;35m[Kstatic_cast<const int>(_cached_previous_dense_capsuledata.cabins[pos].distance)[m[K;
+[5.746s]       |                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.746s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In function ‘[01m[K_u32 rp::standalone::rplidar::_crc32cal(_u32, void*, _u16)[m[K’:
+[5.746s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1027:23:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K-[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[5.746s]  1027 |     _u8 leftBytes = [01;35m[K4 - len[m[K & 0x3;
+[5.746s]       |                     [01;35m[K~~^~~~~[m[K
+[5.746s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual void rp::standalone::rplidar::RPlidarDriverImplCommon::_ultraCapsuleToNormal(const rplidar_response_ultra_capsule_measurement_nodes_t&, rplidar_response_measurement_node_hq_t*, size_t&)[m[K’:
+[5.746s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1238:32:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.746s]  1238 |             if (([01;35m[Kdist_predict1 == 0xFFFFFE00[m[K) || (dist_predict1 == 0x1FF)) {
+[5.747s]       |                  [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[5.754s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1246:32:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.754s]  1246 |             if (([01;35m[Kdist_predict2 == 0xFFFFFE00[m[K) || (dist_predict2 == 0x1FF)) {
+[5.754s]       |                  [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[5.754s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1256:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsyncBit_check_threshold[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.754s]  1256 |                 int [01;35m[KsyncBit_check_threshold[m[K = (int)((3 << 16) / angleInc_q16)+1;//find syncBit in 0~1 degree
+[5.754s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.765s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::getAllSupportedScanModes(std::vector<rp::standalone::rplidar::RplidarScanMode>&, _u32)[m[K’:
+[5.766s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1484:105:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.767s]  1484 | u_result RPlidarDriverImplCommon::getAllSupportedScanModes(std::vector<RplidarScanMode>& outModes, [01;35m[K_u32 timeoutInMs[m[K)
+[5.767s]       |                                                                                                    [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[5.773s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::startScan(bool, bool, _u32, rp::standalone::rplidar::RplidarScanMode*)[m[K’:
+[5.774s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1581:83:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koptions[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.774s]  1581 | u_result RPlidarDriverImplCommon::startScan(bool force, bool useTypicalScan, [01;35m[K_u32 options[m[K, RplidarScanMode* outUsedScanMode)
+[5.775s]       |                                                                              [01;35m[K~~~~~^~~~~~~[m[K
+[5.777s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::stop(_u32)[m[K’:
+[5.777s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1805:45:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.778s]  1805 | u_result RPlidarDriverImplCommon::stop([01;35m[K_u32 timeout[m[K)
+[5.778s]       |                                        [01;35m[K~~~~~^~~~~~~[m[K
+[5.789s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::setLidarSpinSpeed(_u16, _u32)[m[K’:
+[5.789s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:2193:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.790s]  2193 | u_result RPlidarDriverImplCommon::setLidarSpinSpeed(_u16 rpm, [01;35m[K_u32 timeout[m[K)
+[5.790s]       |                                                               [01;35m[K~~~~~^~~~~~~[m[K
+[5.797s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverSerial::connect(const char*, _u32, _u32)[m[K’:
+[5.797s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:2270:83:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.798s]  2270 | u_result RPlidarDriverSerial::connect(const char * port_path, _u32 baudrate, [01;35m[K_u32 flag[m[K)
+[5.798s]       |                                                                              [01;35m[K~~~~~^~~~[m[K
+[5.798s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverTCP::connect(const char*, _u32, _u32)[m[K’:
+[5.798s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:2312:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.798s]  2312 | u_result RPlidarDriverTCP::connect(const char * ipStr, _u32 port, [01;35m[K_u32 flag[m[K)
+[5.799s]       |                                                                   [01;35m[K~~~~~^~~~[m[K
+[5.921s] /home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp: In instantiation of ‘[01m[Ku_result rp::standalone::rplidar::ascendScanData_(TNode*, size_t) [with TNode = _rplidar_response_measurement_node_t; u_result = unsigned int; size_t = long unsigned int][m[K’:
+[5.921s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:2025:64:[m[K   required from here
+[5.922s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1991:27:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression in ‘[01m[K>= 0[m[K’ is always true [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+[5.922s]  1991 |     for (i = count - 1; [01;35m[Ki >= 0[m[K; i--) {
+[5.922s]       |                         [01;35m[K~~^~~~[m[K
+[5.922s] /home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp: In instantiation of ‘[01m[Ku_result rp::standalone::rplidar::ascendScanData_(TNode*, size_t) [with TNode = rplidar_response_measurement_node_hq_t; u_result = unsigned int; size_t = long unsigned int][m[K’:
+[5.922s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:2030:67:[m[K   required from here
+[5.922s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:1991:27:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression in ‘[01m[K>= 0[m[K’ is always true [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+[6.163s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::standalone::rplidar::RPlidarDriverImplCommon::startMotor()[m[K’:
+[6.164s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/sdk/src/rplidar_driver.cpp:2225:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[6.164s]  2225 | [01;35m[K}[m[K
+[6.165s]       | [01;35m[K^[m[K
+[10.322s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[10.323s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:41[m[K,
+[10.323s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:36[m[K:
+[10.324s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.324s]    59 |     _u8 data[[01;35m[K0[m[K];
+[10.325s]       |              [01;35m[K^[m[K
+[10.327s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[10.328s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:41[m[K,
+[10.328s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:36[m[K:
+[10.330s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.330s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[10.331s]       |                  [01;35m[K^[m[K
+[10.490s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:[m[K In member function ‘[01m[Kvoid rplidar_ros::rplidar_node::stop_motor({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)[m[K’:
+[10.496s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:248:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.497s]   248 | void rplidar_node::stop_motor([01;35m[Kconst EmptyRequest req[m[K, EmptyResponse res)
+[10.498s]       |                               [01;35m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[10.498s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:248:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.498s]   248 | void rplidar_node::stop_motor(const EmptyRequest req, [01;35m[KEmptyResponse res[m[K)
+[10.498s]       |                                                       [01;35m[K~~~~~~~~~~~~~~^~~[m[K
+[10.506s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:[m[K In member function ‘[01m[Kvoid rplidar_ros::rplidar_node::start_motor({anonymous}::EmptyRequest, {anonymous}::EmptyResponse)[m[K’:
+[10.506s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:259:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.507s]   259 | void rplidar_node::start_motor([01;35m[Kconst EmptyRequest req[m[K, EmptyResponse res)
+[10.507s]       |                                [01;35m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[10.507s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:259:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kres[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.507s]   259 | void rplidar_node::start_motor(const EmptyRequest req, [01;35m[KEmptyResponse res[m[K)
+[10.507s]       |                                                        [01;35m[K~~~~~~~~~~~~~~^~~[m[K
+[10.521s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:[m[K In member function ‘[01m[Kvoid rplidar_ros::rplidar_node::publish_loop()[m[K’:
+[10.522s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:362:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.524s]   362 |           for (j = 0; [01;35m[Kj < m_angle_compensate_multiple[m[K; j++) {
+[10.524s]       |                       [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.526s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:383:44:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.527s]   383 |       for (size_t x = start_node, y = 0; [01;35m[Kx < end_node[m[K; ++x, ++y) {
+[10.529s]       |                                          [01;35m[K~~^~~~~~~~~~[m[K
+[10.531s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:390:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle_min[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[10.532s]   390 |     float [01;35m[Kangle_min[m[K = deg_2_rad(0.0f);
+[10.532s]       |           [01;35m[K^~~~~~~~~[m[K
+[10.533s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/rplidar_node.cpp:391:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle_max[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[10.533s]   391 |     float [01;35m[Kangle_max[m[K = deg_2_rad(359.0f);
+[10.534s]       |           [01;35m[K^~~~~~~~~[m[K
+[18.525s] [ 77%] [32m[1mLinking CXX shared library librplidar_composition_node.so[0m
+[19.015s] [ 77%] Built target rplidar_composition_node
+[19.040s] [ 88%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/src/standalone_rplidar.cpp.o[0m
+[19.333s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/standalone_rplidar.cpp:16[m[K:
+[19.333s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:50:[m[K [01;35m[Kwarning: [m[K"M_PI" redefined
+[19.333s]    50 | #define M_PI 3.1415926535897932384626433832795
+[19.334s]       | 
+[19.334s] In file included from [01m[K/usr/include/c++/11/cmath:45[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:18[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:24[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[19.334s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[19.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[19.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[19.335s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[19.335s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:34[m[K,
+[19.335s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/standalone_rplidar.cpp:16[m[K:
+[19.335s] [01m[K/usr/include/math.h:1151:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[19.335s]  1151 | # define M_PI           3.14159265358979323846  /* pi */
+[19.335s]       | 
+[23.177s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[23.177s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:41[m[K,
+[23.177s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/standalone_rplidar.cpp:16[m[K:
+[23.177s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_protocol.h:59:14:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[23.177s]    59 |     _u8 data[[01;35m[K0[m[K];
+[23.177s]       |              [01;35m[K^[m[K
+[23.180s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[23.180s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:41[m[K,
+[23.180s]                  from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/standalone_rplidar.cpp:16[m[K:
+[23.181s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/./sdk/include/rplidar_cmd.h:260:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[23.181s]   260 |     _u8  payload[[01;35m[K0[m[K];
+[23.181s]       |                  [01;35m[K^[m[K
+[24.039s] In file included from [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/src/standalone_rplidar.cpp:16[m[K:
+[24.039s] [01m[K/home/nvidia/ros_rlr/src/rplidar_ros2/include/rplidar_node.hpp:76:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Kfloat rplidar_ros::getAngle(const rplidar_response_measurement_node_hq_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[24.039s]    76 | static float [01;35m[KgetAngle[m[K(const rplidar_response_measurement_node_hq_t & node)
+[24.039s]       |              [01;35m[K^~~~~~~~[m[K
+[24.224s] [100%] [32m[1mLinking CXX executable rplidar_composition[0m
+[24.524s] [100%] Built target rplidar_composition
+[24.556s] Invoked command in '/home/nvidia/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/rplidar_ros -- -j4 -l4
+[24.640s] Invoking command in '/home/nvidia/ros_rlr/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros_rlr/build/rplidar_ros
+[24.649s] -- Install configuration: ""
+[24.649s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[24.650s] -- Set runtime path of "/home/nvidia/ros_rlr/install/rplidar_ros/lib/rplidar_ros/rplidar_composition" to ""
+[24.650s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch
+[24.650s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+[24.650s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+[24.650s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+[24.651s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+[24.652s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+[24.652s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+[24.653s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+[24.653s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+[24.653s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+[24.653s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/rviz
+[24.654s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+[24.654s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/lib/librplidar_composition_node.so
+[24.655s] -- Set runtime path of "/home/nvidia/ros_rlr/install/rplidar_ros/lib/librplidar_composition_node.so" to ""
+[24.656s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/include
+[24.656s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/include/visibility.h
+[24.656s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/include/rplidar_node.hpp
+[24.657s] -- Up-to-date: /home/nvidia/ros_rlr/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[24.657s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[24.657s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[24.657s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[24.658s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[24.658s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[24.658s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[24.661s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/package.dsv
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[24.662s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[24.663s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[24.665s] -- Installing: /home/nvidia/ros_rlr/install/rplidar_ros/share/rplidar_ros/package.xml
+[24.669s] Invoked command in '/home/nvidia/ros_rlr/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros_rlr/build/rplidar_ros

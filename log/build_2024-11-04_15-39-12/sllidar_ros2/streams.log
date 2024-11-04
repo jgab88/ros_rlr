@@ -1,0 +1,569 @@
+[0.022s] Invoking command in '/home/nvidia/ros_rlr/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake /home/nvidia/ros_rlr/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros_rlr/install/sllidar_ros2
+[0.100s] -- The C compiler identification is GNU 11.4.0
+[0.247s] -- The CXX compiler identification is GNU 11.4.0
+[0.261s] -- Detecting C compiler ABI info
+[0.431s] -- Detecting C compiler ABI info - done
+[0.453s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.454s] -- Detecting C compile features
+[0.455s] -- Detecting C compile features - done
+[0.468s] -- Detecting CXX compiler ABI info
+[0.612s] -- Detecting CXX compiler ABI info - done
+[0.628s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.628s] -- Detecting CXX compile features
+[0.630s] -- Detecting CXX compile features - done
+[0.635s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.841s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.971s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[1.051s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.057s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.075s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.098s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.129s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.206s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.212s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.336s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.369s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.419s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.435s] -- Looking for pthread.h
+[1.531s] -- Looking for pthread.h - found
+[1.532s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.626s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.630s] -- Found Threads: TRUE  
+[1.722s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.779s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[1.894s] -- Configuring done
+[1.913s] -- Generating done
+[1.917s] -- Build files have been written to: /home/nvidia/ros_rlr/build/sllidar_ros2
+[1.933s] Invoked command in '/home/nvidia/ros_rlr/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake /home/nvidia/ros_rlr/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/nvidia/ros_rlr/install/sllidar_ros2
+[1.935s] Invoking command in '/home/nvidia/ros_rlr/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/sllidar_ros2 -- -j4 -l4
+[2.032s] [ 10%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/src/sllidar_node.cpp.o[0m
+[2.032s] [ 10%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[2.036s] [ 15%] [32mBuilding CXX object CMakeFiles/sllidar_client.dir/src/sllidar_client.cpp.o[0m
+[2.037s] [ 20%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[3.714s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[3.714s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[3.714s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[3.714s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[3.714s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[3.716s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[3.716s]       |                [01;35m[K^[m[K
+[3.716s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[3.716s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[3.716s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[3.716s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[3.716s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[3.717s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[3.717s]       |                    [01;35m[K^[m[K
+[3.927s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kbool rp::arch::net::raw_serial::open(const char*, uint32_t, uint32_t)[m[K’:
+[3.928s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:97:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.929s]    97 | bool raw_serial::open(const char * portname, uint32_t baudrate, [01;35m[Kuint32_t flags[m[K)
+[3.930s]       |                                                                 [01;35m[K~~~~~~~~~^~~~~[m[K
+[3.931s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::flush(_u32)[m[K’:
+[3.931s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:281:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.931s]   281 | void raw_serial::flush( [01;35m[K_u32 flags[m[K)
+[3.931s]       |                         [01;35m[K~~~~~^~~~~[m[K
+[3.934s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::waitforsent(_u32, size_t*)[m[K’:
+[3.935s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:286:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.935s]   286 | int raw_serial::waitforsent([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[3.935s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[3.935s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::waitforrecv(_u32, size_t*)[m[K’:
+[3.935s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:292:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.935s]   292 | int raw_serial::waitforrecv([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[3.936s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[3.942s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::cancelOperation()[m[K’:
+[3.943s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_serial.cpp:427:5:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[3.943s]   427 |     [01;35m[K(int)::write(_selfpipe[1], "x", 1)[m[K;
+[3.944s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.026s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/arch/linux/arch_linux.h:42[m[K,
+[4.028s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:41[m[K,
+[4.029s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[4.029s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_socket.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::arch::net::DGramSocketImpl::sendTo(const rp::net::SocketAddress*, const void*, size_t)[m[K’:
+[4.030s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/arch/linux/net_socket.cpp:733:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.030s]   733 |             assert([01;35m[Kans == len[m[K);
+[4.032s]       |                    [01;35m[K~~~~^~~~~~[m[K
+[4.252s] [ 25%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[4.910s] [ 30%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/dataunpacker/dataunpacker.cpp.o[0m
+[5.500s] [ 35%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/dataunpacker/unpacker/handler_capsules.cpp.o[0m
+[6.370s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[6.371s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[6.371s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[6.371s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunnpacker_commondef.h:41[m[K,
+[6.371s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.cpp:39[m[K:
+[6.372s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[6.372s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[6.372s]       |                [01;35m[K^[m[K
+[6.378s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[6.379s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[6.379s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[6.379s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunnpacker_commondef.h:41[m[K,
+[6.380s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.cpp:39[m[K:
+[6.380s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[6.380s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[6.380s]       |                    [01;35m[K^[m[K
+[6.802s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[6.803s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[6.804s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[6.804s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[6.807s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:39[m[K:
+[6.808s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[6.808s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[6.809s]       |                [01;35m[K^[m[K
+[6.809s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[6.809s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[6.809s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[6.809s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[6.809s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:39[m[K:
+[6.814s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[6.815s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[6.815s]       |                    [01;35m[K^[m[K
+[6.958s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.cpp:40[m[K:
+[6.959s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onCustomSampleDataDecoded(_u8, _u32, const void*, size_t)[m[K’:
+[6.960s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.961s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[6.961s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[6.961s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.961s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[6.961s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[6.961s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.961s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[6.966s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[6.966s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.966s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[6.966s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[6.966s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onDecodingError(int, _u8, const void*, size_t)[m[K’:
+[6.966s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.966s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[6.966s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[6.966s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.974s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[6.975s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[6.975s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.976s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[6.976s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[6.977s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.977s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[6.977s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[7.415s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:40[m[K:
+[7.416s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onCustomSampleDataDecoded(_u8, _u32, const void*, size_t)[m[K’:
+[7.416s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.417s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[7.417s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[7.417s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.417s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[7.417s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[7.417s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.417s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[7.417s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[7.417s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.417s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[7.417s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[7.418s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onDecodingError(int, _u8, const void*, size_t)[m[K’:
+[7.418s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.428s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[7.429s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[7.430s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.430s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[7.430s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[7.430s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.430s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[7.430s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[7.430s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[7.431s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[7.431s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[7.462s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:[m[K In member function ‘[01m[Kvoid sl::internal::unpacker::UnpackerHandler_DenseCapsuleNode::_onScanNodeDenseCapsuleData(rplidar_response_dense_capsule_measurement_nodes_t&, sl::internal::LIDARSampleDataUnpackerInner*)[m[K’:
+[7.463s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:763:30:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on cast result type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+[7.464s]   763 |             const int dist = [01;35m[Kstatic_cast<const int>(_cached_previous_dense_capsuledata.cabins[pos].distance)[m[K;
+[7.464s]       |                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.703s] [ 40%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp.o[0m
+[7.921s] [ 45%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp.o[0m
+[8.776s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[8.776s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[8.778s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[8.778s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[8.778s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:39[m[K:
+[8.778s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[8.780s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[8.780s]       |                [01;35m[K^[m[K
+[8.780s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[8.781s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[8.781s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[8.781s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[8.781s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:39[m[K:
+[8.781s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[8.782s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[8.789s]       |                    [01;35m[K^[m[K
+[9.147s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[9.147s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[9.147s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[9.147s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[9.147s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:39[m[K:
+[9.148s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[9.148s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[9.148s]       |                [01;35m[K^[m[K
+[9.148s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[9.148s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[9.148s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[9.148s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[9.148s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:39[m[K:
+[9.148s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[9.148s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[9.148s]       |                    [01;35m[K^[m[K
+[9.405s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:40[m[K:
+[9.406s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onCustomSampleDataDecoded(_u8, _u32, const void*, size_t)[m[K’:
+[9.406s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.407s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[9.407s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[9.407s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.407s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[9.407s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[9.407s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.407s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[9.407s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[9.407s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.407s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[9.408s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[9.408s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onDecodingError(int, _u8, const void*, size_t)[m[K’:
+[9.408s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.408s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[9.408s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[9.408s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.408s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[9.408s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[9.408s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.408s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[9.408s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[9.408s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.409s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[9.419s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[9.491s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:40[m[K:
+[9.492s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onCustomSampleDataDecoded(_u8, _u32, const void*, size_t)[m[K’:
+[9.492s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.493s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[9.493s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[9.493s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.493s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[9.493s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[9.493s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.493s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[9.493s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[9.493s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.494s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[9.494s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[9.494s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onDecodingError(int, _u8, const void*, size_t)[m[K’:
+[9.498s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.498s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[9.498s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[9.498s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.498s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[9.502s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[9.503s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.503s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[9.503s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[9.503s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[9.503s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[9.503s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[9.779s] [ 50%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/hal/thread.cpp.o[0m
+[9.811s] [ 55%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/rplidar_driver.cpp.o[0m
+[10.507s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[10.507s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[10.507s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar.h:36[m[K,
+[10.508s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/src/sllidar_node.cpp:38[m[K:
+[10.508s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.508s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[10.508s]       |                [01;35m[K^[m[K
+[10.508s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[10.508s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar.h:36[m[K,
+[10.508s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/src/sllidar_node.cpp:38[m[K:
+[10.508s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.508s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[10.508s]       |                    [01;35m[K^[m[K
+[10.649s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[10.649s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[10.650s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[10.650s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:33[m[K:
+[10.650s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.650s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[10.650s]       |                [01;35m[K^[m[K
+[10.650s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[10.650s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[10.650s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[10.650s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:33[m[K:
+[10.650s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.651s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[10.651s]       |                    [01;35m[K^[m[K
+[10.763s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[10.764s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[10.765s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[10.766s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/hal/thread.cpp:35[m[K:
+[10.766s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.766s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[10.766s]       |                [01;35m[K^[m[K
+[10.766s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[10.767s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[10.767s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/sdkcommon.h:49[m[K,
+[10.767s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/hal/thread.cpp:35[m[K:
+[10.767s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.767s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[10.767s]       |                    [01;35m[K^[m[K
+[10.906s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/hal/thread.cpp:43[m[K:
+[10.906s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/arch/linux/thread.hpp:[m[K In static member function ‘[01m[Kstatic rp::hal::Thread rp::hal::Thread::create(thread_proc_t, void*)[m[K’:
+[10.906s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/arch/linux/thread.hpp:52:57:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kthread_proc_t[m[K’ {aka ‘[01m[Klong unsigned int (*)(void*)[m[K’} to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[10.906s]    52 |     pthread_create((pthread_t *)&newborn._handle, NULL, [01;35m[K(void * (*)(void *))proc[m[K, data);
+[10.906s]       |                                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.911s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/arch/linux/thread.hpp:[m[K In member function ‘[01m[Ku_result rp::hal::Thread::join(long unsigned int)[m[K’:
+[10.911s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/src/arch/linux/thread.hpp:176:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.911s]   176 | u_result Thread::join([01;35m[Kunsigned long timeout[m[K)
+[10.911s]       |                       [01;35m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[11.022s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::connect(const char*, _u32, _u32)[m[K’:
+[11.022s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:67:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.023s]    67 |     u_result RPlidarDriver::connect(const char *path, _u32 portOrBaud, [01;35m[K_u32 flag[m[K)
+[11.023s]       |                                                                        [01;35m[K~~~~~^~~~[m[K
+[11.028s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::reset(_u32)[m[K’:
+[11.028s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:101:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.028s]   101 |     u_result RPlidarDriver::reset([01;35m[K_u32 timeout[m[K)
+[11.028s]       |                                   [01;35m[K~~~~~^~~~~~~[m[K
+[11.028s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::getScanDataWithInterval(rplidar_response_measurement_node_t*, size_t&)[m[K’:
+[11.029s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:180:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knodebuffer[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.029s]   180 |     u_result RPlidarDriver::getScanDataWithInterval([01;35m[Krplidar_response_measurement_node_t * nodebuffer[m[K, size_t & count)
+[11.029s]       |                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[11.029s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/rplidar_driver.cpp:180:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcount[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.029s]   180 |     u_result RPlidarDriver::getScanDataWithInterval(rplidar_response_measurement_node_t * nodebuffer, [01;35m[Ksize_t & count[m[K)
+[11.029s]       |                                                                                                       [01;35m[K~~~~~~~~~^~~~~[m[K
+[11.155s] [ 60%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_async_transceiver.cpp.o[0m
+[11.338s] [ 65%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_crc.cpp.o[0m
+[11.384s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[11.384s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_crc.h:36[m[K,
+[11.384s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_crc.cpp:33[m[K:
+[11.384s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[11.385s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[11.385s]       |                [01;35m[K^[m[K
+[11.395s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_crc.h:36[m[K,
+[11.395s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_crc.cpp:33[m[K:
+[11.395s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[11.395s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[11.395s]       |                    [01;35m[K^[m[K
+[11.454s] [ 70%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_lidar_driver.cpp.o[0m
+[11.988s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[11.989s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[11.989s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[11.989s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.cpp:35[m[K:
+[11.989s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[11.989s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[11.989s]       |                [01;35m[K^[m[K
+[11.989s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[11.989s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[11.989s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[11.989s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.cpp:35[m[K:
+[11.990s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[11.990s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[11.990s]       |                    [01;35m[K^[m[K
+[12.187s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.cpp:44[m[K:
+[12.188s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::onChannelError(u_result)[m[K’:
+[12.189s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.189s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[12.189s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[12.522s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[12.523s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[12.523s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[12.523s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:33[m[K:
+[12.523s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[12.523s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[12.523s]       |                [01;35m[K^[m[K
+[12.523s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[12.523s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[12.523s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[12.523s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:33[m[K:
+[12.523s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[12.524s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[12.527s]       |                    [01;35m[K^[m[K
+[12.527s] [ 75%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_lidarprotocol_codec.cpp.o[0m
+[13.182s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:50[m[K:
+[13.183s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onCustomSampleDataDecoded(_u8, _u32, const void*, size_t)[m[K’:
+[13.184s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.184s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[13.184s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[13.185s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.185s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[13.185s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[13.185s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.185s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[13.185s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[13.185s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.185s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[13.185s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[13.185s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::onDecodingError(int, _u8, const void*, size_t)[m[K’:
+[13.186s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.189s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[13.189s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[13.189s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.189s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[13.189s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[13.189s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.189s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[13.189s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[13.189s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/dataunpacker/dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.190s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[13.199s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[13.207s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:51[m[K:
+[13.207s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::onChannelError(u_result)[m[K’:
+[13.207s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.207s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[13.208s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[13.281s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::reset(sl_u32)[m[K’:
+[13.281s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:511:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.281s]   511 |         sl_result reset([01;35m[Ksl_u32 timeoutInMs = DEFAULT_TIMEOUT[m[K)
+[13.281s]       |                         [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.291s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::startScan(bool, bool, sl_u32, sl::LidarScanMode*)[m[K’:
+[13.291s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:586:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koptions[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.291s]   586 |         sl_result startScan(bool force, bool useTypicalScan, [01;35m[Ksl_u32 options = 0[m[K, LidarScanMode* outUsedScanMode = nullptr)
+[13.295s]       |                                                              [01;35m[K~~~~~~~^~~~~~~~~~~[m[K
+[13.301s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::stop(sl_u32)[m[K’:
+[13.301s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:763:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.301s]   763 |         sl_result stop([01;35m[Ksl_u32 timeout = DEFAULT_TIMEOUT[m[K)
+[13.301s]       |                        [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.308s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::getFrequency(const sl::LidarScanMode&, const sl_lidar_response_measurement_node_hq_t*, size_t, float&)[m[K’:
+[13.308s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:880:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knodes[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.308s]   880 |         sl_result getFrequency(const LidarScanMode& scanMode, [01;35m[Kconst sl_lidar_response_measurement_node_hq_t* nodes[m[K, size_t count, float& frequency)
+[13.308s]       |                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[13.317s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::getMotorInfo(sl::LidarMotorInfo&, sl_u32)[m[K’:
+[13.317s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:1023:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.317s]  1023 |         sl_result getMotorInfo(LidarMotorInfo &motorInfo, [01;35m[Ksl_u32 timeoutInMs[m[K)
+[13.317s]       |                                                           [01;35m[K~~~~~~~^~~~~~~~~~~[m[K
+[13.323s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Ku_result sl::SlamtecLidarDriver::getScanModeCount(sl_u16&, sl_u32)[m[K’:
+[13.323s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:1199:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.323s]  1199 |         u_result getScanModeCount(sl_u16& modeCount, [01;35m[Ksl_u32 timeoutInMs = DEFAULT_TIMEOUT[m[K)
+[13.323s]       |                                                      [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.473s] /home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp: In instantiation of ‘[01m[Kvoid sl::RawSampleNodeHolder<T>::pushNode(_u64, const T*) [with T = sl_lidar_response_measurement_node_hq_t; _u64 = long unsigned int][m[K’:
+[13.473s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:1648:42:[m[K   required from here
+[13.473s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:202:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimestamp_uS[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.473s]   202 |         void pushNode([01;35m[K_u64 timestamp_uS[m[K, const T* node)
+[13.473s]       |                       [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[13.823s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_protocol.h:36[m[K,
+[13.823s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:39[m[K,
+[13.824s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[13.824s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidarprotocol_codec.cpp:35[m[K:
+[13.824s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[13.824s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[13.824s]       |                [01;35m[K^[m[K
+[13.824s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar_cmd.h:36[m[K,
+[13.824s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/rplidar.h:40[m[K,
+[13.824s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sdkcommon.h:49[m[K,
+[13.824s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidarprotocol_codec.cpp:35[m[K:
+[13.824s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[13.824s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[13.825s]       |                    [01;35m[K^[m[K
+[13.938s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:[m[K At global scope:
+[13.939s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:83:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::convert(const sl_lidar_response_measurement_node_hq_t&, sl_lidar_response_measurement_node_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[13.939s]    83 |     static void [01;35m[Kconvert[m[K(const sl_lidar_response_measurement_node_hq_t& from, sl_lidar_response_measurement_node_t& to)
+[13.939s]       |                 [01;35m[K^~~~~~~[m[K
+[13.939s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:75:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::convert(const sl_lidar_response_measurement_node_t&, sl_lidar_response_measurement_node_hq_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[13.939s]    75 |     static void [01;35m[Kconvert[m[K(const sl_lidar_response_measurement_node_t& from, sl_lidar_response_measurement_node_hq_t& to)
+[13.939s]       |                 [01;35m[K^~~~~~~[m[K
+[13.939s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidar_driver.cpp:70:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::printDeprecationWarn(const char*, const char*)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[13.939s]    70 |     static void [01;35m[KprintDeprecationWarn[m[K(const char* fn, const char* replacement)
+[13.939s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[14.289s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_lidarprotocol_codec.cpp:49[m[K:
+[14.289s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::onChannelError(u_result)[m[K’:
+[14.290s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.290s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[14.294s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[14.500s] [ 80%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_serial_channel.cpp.o[0m
+[15.020s] [ 85%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_tcp_channel.cpp.o[0m
+[15.084s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[15.084s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[15.085s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_serial_channel.cpp:33[m[K:
+[15.085s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.085s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[15.085s]       |                [01;35m[K^[m[K
+[15.088s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[15.088s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_serial_channel.cpp:33[m[K:
+[15.088s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.088s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[15.088s]       |                    [01;35m[K^[m[K
+[15.288s] [ 90%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/sdk/src/sl_udp_channel.cpp.o[0m
+[15.642s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[15.643s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[15.644s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_tcp_channel.cpp:33[m[K:
+[15.644s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.644s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[15.644s]       |                [01;35m[K^[m[K
+[15.644s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[15.644s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_tcp_channel.cpp:33[m[K:
+[15.645s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.649s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[15.650s]       |                    [01;35m[K^[m[K
+[15.651s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_tcp_channel.cpp:[m[K In member function ‘[01m[Kvoid sl::TcpChannel::setStatus(_u32)[m[K’:
+[15.651s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_tcp_channel.cpp:109:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[15.652s]   109 |         void setStatus([01;35m[K_u32 flag[m[K){}
+[15.652s]       |                        [01;35m[K~~~~~^~~~[m[K
+[16.041s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[16.042s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[16.042s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_udp_channel.cpp:33[m[K:
+[16.043s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[16.043s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[16.043s]       |                [01;35m[K^[m[K
+[16.043s] In file included from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[16.043s]                  from [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_udp_channel.cpp:33[m[K:
+[16.043s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[16.043s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[16.043s]       |                    [01;35m[K^[m[K
+[16.057s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_udp_channel.cpp:[m[K In member function ‘[01m[Kvoid sl::UdpChannel::setStatus(_u32)[m[K’:
+[16.057s] [01m[K/home/nvidia/ros_rlr/src/sllidar_ros2/sdk/src/sl_udp_channel.cpp:112:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[16.057s]   112 |         void setStatus([01;35m[K_u32 flag[m[K){}
+[16.057s]       |                        [01;35m[K~~~~~^~~~[m[K
+[17.209s] [ 95%] [32m[1mLinking CXX executable sllidar_node[0m
+[17.954s] [ 95%] Built target sllidar_node
+[23.592s] [100%] [32m[1mLinking CXX executable sllidar_client[0m
+[24.366s] [100%] Built target sllidar_client
+[24.383s] Invoked command in '/home/nvidia/ros_rlr/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --build /home/nvidia/ros_rlr/build/sllidar_ros2 -- -j4 -l4
+[24.533s] Invoking command in '/home/nvidia/ros_rlr/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros_rlr/build/sllidar_ros2
+[24.550s] -- Install configuration: ""
+[24.550s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch
+[24.550s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2e_launch.py
+[24.550s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_t1_launch.py
+[24.550s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2_launch.py
+[24.551s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a1_launch.py
+[24.551s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_tcp_launch.py
+[24.551s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2e_launch.py
+[24.551s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m7_launch.py
+[24.552s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_launch.py
+[24.552s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m12_launch.py
+[24.553s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s3_launch.py
+[24.553s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m8_launch.py
+[24.553s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s3_launch.py
+[24.555s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m8_launch.py
+[24.555s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a3_launch.py
+[24.555s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_launch.py
+[24.556s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_c1_launch.py
+[24.556s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_tcp_launch.py
+[24.561s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a1_launch.py
+[24.566s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2_launch.py
+[24.566s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m12_launch .py
+[24.566s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_t1_launch.py
+[24.566s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_c1_launch.py
+[24.566s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a3_launch.py
+[24.567s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m7_launch.py
+[24.567s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/rviz
+[24.567s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz
+[24.567s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node
+[24.567s] -- Set runtime path of "/home/nvidia/ros_rlr/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node" to ""
+[24.567s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client
+[24.574s] -- Set runtime path of "/home/nvidia/ros_rlr/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client" to ""
+[24.574s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/ament_index/resource_index/package_run_dependencies/sllidar_ros2
+[24.574s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/ament_index/resource_index/parent_prefix_path/sllidar_ros2
+[24.577s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.sh
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.dsv
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/environment/path.sh
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/environment/path.dsv
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/local_setup.bash
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/local_setup.sh
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/local_setup.zsh
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/local_setup.dsv
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/package.dsv
+[24.578s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/ament_index/resource_index/packages/sllidar_ros2
+[24.580s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.580s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+[24.580s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config.cmake
+[24.582s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config-version.cmake
+[24.582s] -- Installing: /home/nvidia/ros_rlr/install/sllidar_ros2/share/sllidar_ros2/package.xml
+[24.589s] Invoked command in '/home/nvidia/ros_rlr/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nvidia/ros_rlr/install/cube_localizer:/opt/ros/humble /usr/bin/cmake --install /home/nvidia/ros_rlr/build/sllidar_ros2

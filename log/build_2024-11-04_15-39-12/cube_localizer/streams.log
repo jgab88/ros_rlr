@@ -1,0 +1,39 @@
+[0.907s] Invoking command in '/home/nvidia/ros_rlr/src/cube_localizer': PYTHONPATH=/home/nvidia/ros_rlr/build/cube_localizer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/nvidia/ros_rlr/build/cube_localizer/build install --record /home/nvidia/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
+[1.224s] running egg_info
+[1.225s] creating ../../build/cube_localizer/cube_localizer.egg-info
+[1.226s] writing ../../build/cube_localizer/cube_localizer.egg-info/PKG-INFO
+[1.226s] writing dependency_links to ../../build/cube_localizer/cube_localizer.egg-info/dependency_links.txt
+[1.226s] writing entry points to ../../build/cube_localizer/cube_localizer.egg-info/entry_points.txt
+[1.226s] writing requirements to ../../build/cube_localizer/cube_localizer.egg-info/requires.txt
+[1.226s] writing top-level names to ../../build/cube_localizer/cube_localizer.egg-info/top_level.txt
+[1.227s] writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[1.228s] reading manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[1.229s] writing manifest file '../../build/cube_localizer/cube_localizer.egg-info/SOURCES.txt'
+[1.230s] running build
+[1.230s] running build_py
+[1.231s] creating /home/nvidia/ros_rlr/build/cube_localizer/build
+[1.231s] creating /home/nvidia/ros_rlr/build/cube_localizer/build/lib
+[1.231s] creating /home/nvidia/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+[1.231s] copying cube_localizer/cube_localizer.py -> /home/nvidia/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+[1.231s] copying cube_localizer/__init__.py -> /home/nvidia/ros_rlr/build/cube_localizer/build/lib/cube_localizer
+[1.231s] running install
+[1.233s] running install_lib
+[1.233s] creating /home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+[1.234s] copying /home/nvidia/ros_rlr/build/cube_localizer/build/lib/cube_localizer/cube_localizer.py -> /home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+[1.234s] copying /home/nvidia/ros_rlr/build/cube_localizer/build/lib/cube_localizer/__init__.py -> /home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer
+[1.234s] byte-compiling /home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/cube_localizer.py to cube_localizer.cpython-310.pyc
+[1.236s] byte-compiling /home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer/__init__.py to __init__.cpython-310.pyc
+[1.236s] running install_data
+[1.237s] creating /home/nvidia/ros_rlr/install/cube_localizer/share/ament_index
+[1.237s] creating /home/nvidia/ros_rlr/install/cube_localizer/share/ament_index/resource_index
+[1.237s] creating /home/nvidia/ros_rlr/install/cube_localizer/share/ament_index/resource_index/packages
+[1.237s] copying resource/cube_localizer -> /home/nvidia/ros_rlr/install/cube_localizer/share/ament_index/resource_index/packages
+[1.237s] copying package.xml -> /home/nvidia/ros_rlr/install/cube_localizer/share/cube_localizer
+[1.237s] copying launch/cube_localizer.launch.py -> /home/nvidia/ros_rlr/install/cube_localizer/share/cube_localizer
+[1.237s] copying config.rviz -> /home/nvidia/ros_rlr/install/cube_localizer/share/cube_localizer
+[1.238s] running install_egg_info
+[1.241s] Copying ../../build/cube_localizer/cube_localizer.egg-info to /home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages/cube_localizer-0.0.0-py3.10.egg-info
+[1.242s] running install_scripts
+[1.273s] Installing cube_localizer script to /home/nvidia/ros_rlr/install/cube_localizer/lib/cube_localizer
+[1.274s] writing list of installed files to '/home/nvidia/ros_rlr/build/cube_localizer/install.log'
+[1.323s] Invoked command in '/home/nvidia/ros_rlr/src/cube_localizer' returned '0': PYTHONPATH=/home/nvidia/ros_rlr/build/cube_localizer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nvidia/ros_rlr/install/cube_localizer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/cube_localizer build --build-base /home/nvidia/ros_rlr/build/cube_localizer/build install --record /home/nvidia/ros_rlr/build/cube_localizer/install.log --single-version-externally-managed install_data
